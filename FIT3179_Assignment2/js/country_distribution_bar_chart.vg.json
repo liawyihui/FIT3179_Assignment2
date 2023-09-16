@@ -7,6 +7,6 @@
     "mark": "bar",
     "encoding": {
         "x": { "field": "count", "type": "quantitative", "title":"Daily Cost"},
-        "y": { "field": "country", "type": "nominal", "title": null}
+        "y": { "field": "country", "type": "nominal", "title": Country}
     }
 }
