@@ -6,7 +6,7 @@
     },
     "mark": "bar",
     "encoding": {
-        "x": { "field": "count", "type": "quantitative", "title": "Number of Listings", "sort":"""-y"},
+        "x": { "field": "count", "type": "quantitative", "title": "Number of Listings", "sort":"-y"},
         "y": { "field": "country", "type": "nominal", "title": "Country"}
     }
 }
