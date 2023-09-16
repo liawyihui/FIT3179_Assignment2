@@ -17,7 +17,7 @@
             "field": "country",
             "type": "nominal",
             "title": "Country",
-            "sort":"-y"
+            "sort":"-x"
         }
     }
 }
