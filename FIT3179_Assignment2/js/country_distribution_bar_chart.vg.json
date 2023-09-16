@@ -8,7 +8,7 @@
     },
     "mark": {
         "type": "bar",
-        "color": "blue"
+        "color": "orange"
     },
     "encoding": {
         "x": {
