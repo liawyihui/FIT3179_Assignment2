@@ -3,6 +3,8 @@
     "title": {
         "text": "Property Distribution in Countries"
     },
+    "width": 1000,
+  "height": 500,
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/3179/main/FIT3179_Assignment2/data/aggregated_world_data.csv"
     },
