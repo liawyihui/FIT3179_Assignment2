@@ -29,7 +29,7 @@
         },
         "tooltip": [  
             {"field": "count", "type": "quantitative", "title": "Number of Listings"},
-            {"field": "country", "type": "nominal", "title": "Country"}
+            
         ]
     }
 }
