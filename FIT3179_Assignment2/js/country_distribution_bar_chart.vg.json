@@ -8,7 +8,7 @@
     },
     "transform": [
         {
-            "filter": {"field": "count", "lt": 100}
+            "filter": {"field": "count", "gte": 100}
         }
     ],
     "mark": {
