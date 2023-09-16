@@ -8,7 +8,10 @@
     },
     "transform": [
         {
-            "filter": {"field": "count", "gte": 100}
+            "filter": {
+                "field": "count",
+                "gte": 100
+            }
         }
     ],
     "mark": {
@@ -25,13 +28,19 @@
             "field": "country",
             "type": "nominal",
             "title": "Country",
-            "sort":"-x"
+            "sort": "-x"
         },
         "tooltip": [
-
-            {"field": "country", "type": "nominal", "title": "Country"},            {"field": "country", "type": "nominal", "title": "Country"},  
-            {"field": "count", "type": "quantitative", "title": "Number of Listings"}
-            
+            {
+                "field": "country",
+                "type": "nominal",
+                "title": "Country"
+            },
+            {
+                "field": "count",
+                "type": "quantitative",
+                "title": "Number of Listings"
+            }
         ]
     }
 }
