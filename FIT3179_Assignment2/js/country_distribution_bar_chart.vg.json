@@ -8,7 +8,7 @@
     },
     "transform": [
         {
-            "filter": {"field": "count", "gte": YOUR_MINIMUM_AMOUNT}
+            "filter": {"field": "count", "lt": YOUR_MINIMUM_AMOUNT}
         }
     ],
     "mark": {
