@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Cheapest European Cities" },
+    "title": { "text": "Property " },
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/3179/main/FIT3179_Assignment2/data/aggregated_world_data.csv"
     },
