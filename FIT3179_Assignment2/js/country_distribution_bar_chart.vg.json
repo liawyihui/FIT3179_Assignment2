@@ -27,7 +27,7 @@
             "title": "Country",
             "sort":"-x"
         },
-        "tooltip": [  // Define the fields you want as tooltips
+        "tooltip": [  
             {"field": "count", "type": "quantitative", "title": "Number of Listings"},
             {"field": "country", "type": "nominal", "title": "Country"}
         ]
