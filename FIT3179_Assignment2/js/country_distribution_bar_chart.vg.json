@@ -27,7 +27,8 @@
             "title": "Country",
             "sort":"-x"
         },
-        "tooltip": [  
+        "tooltip": [
+            {"field": "country", "type": "nominal", "title": "Country"},  
             {"field": "count", "type": "quantitative", "title": "Number of Listings"},
             
         ]
