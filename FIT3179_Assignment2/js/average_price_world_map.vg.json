@@ -72,7 +72,7 @@
           {
             "field": "average_price_in_USD",
             "type": "quantitative",
-            "title": "Average Property Price(USD)"
+            "title": "Average Property Price (USD)"
           }
         ]
       }
