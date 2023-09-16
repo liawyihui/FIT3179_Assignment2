@@ -6,6 +6,11 @@
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/3179/main/FIT3179_Assignment2/data/aggregated_world_data.csv"
     },
+    "transform": [
+        {
+            "filter": {"field": "count", "gte": YOUR_MINIMUM_AMOUNT}
+        }
+    ],
     "mark": {
         "type": "bar",
         "color": "orange"
