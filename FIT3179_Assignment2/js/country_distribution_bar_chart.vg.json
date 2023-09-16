@@ -16,7 +16,8 @@
         "y": {
             "field": "country",
             "type": "nominal",
-            "title": "Country"
+            "title": "Country",
+            "sort"
         }
     }
 }
