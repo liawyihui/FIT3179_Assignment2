@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Property Price in Countries",
+    "fontSize": 20
+  },
+  "width": 1000,
+  "height": 500,
+  "projection": {
+    "type": "equalEarth"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/liawyihui/3179/main/FIT3179_Assignment2/js/ne_110m.json",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_110m_admin_0_countries"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/liawyihui/3179/main/FIT3179_Assignment2/data/aggregated_world_data.csv"
+        },
+        "key": "country",
+        "fields": ["avg_price_usd"]
+      },
+      "default": 0, 
+      "as": "average_price_in_USD"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray", 
+        "stroke": "black",
+        "strokeWidth":0.5  
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.NAME",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "average_price_in_USD",
+            "type": "quantitative",
+            "title": "Average Property Price(USD)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "geoshape"
+      },
+      "encoding": {
+        "color": {
+          "field": "average_price_in_USD",
+          "type": "quantitative",
+          "title": "Average Property Price(USD)",
+          "scale": {
+            "scheme": "blues"
+          },
+          "legend": { 
+            "title": "Average Property Price(USD)",
+            "orient": "right",
+            "titleFontSize":12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.NAME",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "average_price_in_USD",
+            "type": "quantitative",
+            "title": "Average Property Price(USD)"
+          }
+        ]
+      }
+    }
+  ]
+}
