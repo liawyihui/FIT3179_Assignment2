@@ -26,7 +26,7 @@
         "key": "country",
         "fields": ["avg_price_usd"]
       },
-      "default": 0, 
+      "default": "Not Available", 
       "as": "average_price_in_USD"
     }
   ],
@@ -47,7 +47,7 @@
           },
           {
             "field": "average_price_in_USD",
-            "type": "quantitative",
+            "type": "nominal",
             "title": "Average Property Price(USD)"
           }
         ]
