@@ -89,16 +89,16 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/js/ne_110m_graticules_30.topojson",
+        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/js/ne_110m_ocean.topojson",
         "format": {
           "type": "topojson",
-          "feature": "ne_110m_graticules_30"
+          "feature": "ne_110m_ocean"
         }
       },
       "mark": {
         "type": "geoshape",
         "fill": null,
-        "stroke": "lightgray"
+        "stroke": "blue"
       }
     }
   ]
