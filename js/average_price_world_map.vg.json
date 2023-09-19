@@ -24,9 +24,11 @@
           "url": "https://raw.githubusercontent.com/liawyihui/3179/main/data/aggregated_world_data.csv"
         },
         "key": "country",
-        "fields": ["avg_price_usd"]
+        "fields": [
+          "avg_price_usd"
+        ]
       },
-      "default": "Not Available", 
+      "default": "Not Available",
       "as": "average_price_in_USD"
     }
   ],
@@ -34,9 +36,9 @@
     {
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray", 
+        "fill": "lightgray",
         "stroke": "black",
-        "strokeWidth":0.5  
+        "strokeWidth": 0.5
       },
       "encoding": {
         "tooltip": [
@@ -65,10 +67,10 @@
           "scale": {
             "scheme": "blues"
           },
-          "legend": { 
+          "legend": {
             "title": "Average Property Price(USD)",
             "orient": "right",
-            "titleFontSize":12
+            "titleFontSize": 12
           }
         },
         "tooltip": [
@@ -83,6 +85,20 @@
             "title": "Average Property Price(USD)"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/js/ne_110m_graticules_30.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_30"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "lightgray"
       }
     }
   ]
