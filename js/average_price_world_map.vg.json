@@ -35,15 +35,15 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/js/ne_110m_ocean.topojson",
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
         "format": {
           "type": "topojson",
-          "feature": "ne_110m_ocean"
+          "feature": "oceans"
         }
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightblue"
+        "fill": "lightskyblue"
       }
     },
     {
@@ -78,7 +78,7 @@
           "type": "quantitative",
           "title": "Average Property Price(USD)",
           "scale": {
-            "scheme": "blues"
+            "scheme": "oranges"
           },
           "legend": {
             "title": "Average Property Price(USD)",
