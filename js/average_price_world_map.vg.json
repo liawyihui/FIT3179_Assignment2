@@ -16,23 +16,25 @@
       "feature": "ne_110m_admin_0_countries"
     }
   },
-  "transform": [
-    {
-      "lookup": "properties.NAME",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/liawyihui/3179/main/data/aggregated_world_data.csv"
-        },
-        "key": "country",
-        "fields": [
-          "avg_price_usd"
-        ]
-      },
-      "default": "Not Available",
-      "as": "average_price_in_USD"
-    }
-  ],
   "layer": [
+    {
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      },
+      "encoding": {
+        "tooltip": {
+          "field": "note"
+        }
+      }
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/js/ne_110m_ocean.topojson",
@@ -47,28 +49,38 @@
       }
     },
     {
+      "data": {
+        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/js/ne_110m_graticules_30.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_30"
+        }
+      },
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "white",
-        "strokeWidth": 0.5
-      },
-      "encoding": {
-        "tooltip": [
-          {
-            "field": "properties.NAME",
-            "type": "nominal",
-            "title": "Country"
-          },
-          {
-            "field": "average_price_in_USD",
-            "type": "nominal",
-            "title": "Average Property Price(USD)"
-          }
-        ]
+        "fill": null,
+        "stroke": "lightgray"
       }
     },
     {
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/liawyihui/3179/main/data/aggregated_world_data.csv"
+            },
+            "key": "country",
+            "fields": [
+              "avg_price_usd"
+            ]
+          }
+        },
+        {
+          "calculate": "datum.avg_price_usd",
+          "as": "average_price_in_USD"
+        }
+      ],
       "mark": {
         "type": "geoshape"
       },
@@ -78,7 +90,13 @@
           "type": "quantitative",
           "title": "Average Property Price(USD)",
           "scale": {
-            "scheme": "oranges"
+            "scheme": "oranges",
+            "type": "threshold",
+            "domain": [
+              400000,
+              800000,
+              1200000
+            ]
           },
           "legend": {
             "title": "Average Property Price(USD)",
@@ -98,20 +116,6 @@
             "title": "Average Property Price(USD)"
           }
         ]
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/js/ne_110m_graticules_30.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_110m_graticules_30"
-        }
-      },
-      "mark": {
-        "type": "geoshape",
-        "fill": null,
-        "stroke": "lightgray"
       }
     }
   ]
