@@ -90,13 +90,7 @@
           "type": "quantitative",
           "title": "Average Property Price(USD)",
           "scale": {
-            "scheme": "oranges",
-            "type": "threshold",
-            "domain": [
-              400000,
-              800000,
-              1200000
-            ]
+            "scheme": "oranges"
           },
           "legend": {
             "title": "Average Property Price(USD)",

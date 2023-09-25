@@ -7,3 +7,8 @@ var country_distribution_bar_chart = "js/country_distribution_bar_chart.vg.json"
 vegaEmbed('#country_distribution_bar_chart', country_distribution_bar_chart, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
+
+var line_chart = "js/average_price_across_years.vg.json";
+vegaEmbed('#line_chart', line_chart, { "actions": false }).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);

@@ -40,11 +40,6 @@
                 "title": "Country"
             },
             {
-                "field": "country",
-                "type": "nominal",
-                "title": "Country"
-            },
-            {
                 "field": "count",
                 "type": "quantitative",
                 "title": "Number of Listings"
