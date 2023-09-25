@@ -1,27 +1,27 @@
 country,avg_price_usd,count
 Australia,559000,1
-Austria,462811,148
-Belarus,72793,12648
-Croatia,447760,873
+Austria,464706,107
+Belarus,98199,5194
+Croatia,516185,357
 Cyprus,196386,46
 Czechia,353920,12
-Finland,416142,7
-Georgia,86921,1936
-Greece,539614,4870
-Hungary,185319,7324
+Finland,471668,5
+Georgia,86886,1935
+Greece,619441,1362
+Hungary,176259,3176
 Indonesia,304614,59
-Italy,1272741,386
-Latvia,535315,621
-Lithuania,176857,2496
-Montenegro,357347,802
-N. Cyprus,199182,515
-Poland,363940,673
-Portugal,816568,204
-Russia,137649,13085
-Serbia,144324,25
-Spain,587254,2228
-Thailand,263952,461
-Turkey,337505,10760
-United Arab Emirates,1009814,1335
+Italy,1027563,192
+Latvia,580908,476
+Lithuania,233533,997
+Montenegro,355264,754
+N. Cyprus,199337,514
+Poland,478734,129
+Portugal,804114,172
+Russia,137405,12874
+Serbia,133804,20
+Spain,722103,1504
+Thailand,263725,457
+Turkey,335048,10520
+United Arab Emirates,1010308,1334
 United States of America,1234640,413
 Uzbekistan,102266,794
