@@ -1,47 +1,54 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Property Bubble Plot",
+    "title": "Property Prices vs Room Count vs Area by Country",
+    "width": 575,
+    "height": 300,
     "data": {
-        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/world_real_estate.csv"
+        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/min_price_by_country.csv"
     },
-    "transform": [
-        {
-            "aggregate": [
-                {
-                    "op": "min",
-                    "field": "price_in_USD",
-                    "as": "min_price"
-                }
-            ],
-            "groupby": [
-                "country"
-            ]
-        }
-    ],
     "mark": {
         "type": "circle",
         "filled": true
     },
     "encoding": {
         "x": {
-            "field": "min_price",
-            "type": "quantitative",
-            "title": "Number of Rooms"
-        },
-        "y": {
-            "field": "min_price",
+            "field": "area",
             "type": "quantitative",
             "title": "Total Area (m²)"
         },
-        "size": {
-            "field": "min_price",
+        "y": {
+            "field": "min_price_in_USD",
             "type": "quantitative",
             "title": "Minimum Property Price (USD)"
+            
+        },
+        "size": {
+            "field": "rooms",
+            "type": "ordinal",
+            "title": "Number of Rooms"
         },
         "color": {
             "field": "country",
             "type": "nominal",
             "title": "Country"
-        }
+        },
+        "tooltip": [
+            {
+                "field": "country",
+                "title": "Country"
+            },
+            {
+                "field": "area",
+                "title": "Total Area (m²)"
+            },
+            {
+                "field": "rooms",
+                "title": "Number of Rooms"
+            },
+            {
+                "field": "min_price_in_USD",
+                "title": "Minimum Property Price (USD)"
+            }
+        ]
     }
 }
