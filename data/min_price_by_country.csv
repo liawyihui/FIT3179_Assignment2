@@ -1,4 +1,4 @@
-country,rooms,area,min_price_in_USD,Continents
+country,rooms,area,min_price_in_USD,continent
 Australia,2,120,559000,Australia
 Austria,2,43,160831,Europe
 Belarus,2,29,3000,Europe
