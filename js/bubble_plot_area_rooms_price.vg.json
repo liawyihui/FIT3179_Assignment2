@@ -1,15 +1,29 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Property Prices vs Room Count vs Area by Country",
+    "title": "Comparison of Minimum Property Prices, Room Count, and Area Across Countries",
     "width": 575,
     "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/min_price_by_country.csv"
     },
-    "mark": {
-        "type": "circle",
-        "filled": true
-    },
+    "params": [
+        {
+            "name": "Property_Price",
+            "value": 0,
+            "bind": {
+                "input": "range",
+                "min": 0,
+                "max": 500000,
+                "step": 10000,
+                "name": "Minimum Property Price: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "datum.min_price_in_USD > Property_Price"
+        }
+    ],
     "encoding": {
         "x": {
             "field": "area",
@@ -20,93 +34,130 @@
             "field": "min_price_in_USD",
             "type": "quantitative",
             "title": "Property Price (USD)"
-            
-        },
-        "size": {
-            "field": "rooms",
-            "type": "ordinal",
-            "title": "Number of Rooms"
-        },
-        "color": {
-            "field": "country",
-            "type": "nominal",
-            "title": "Country",
-            "scale": {
-                "domain": [
-                    "Australia",
-                    "Austria",
-                    "Belarus",
-                    "Croatia",
-                    "Cyprus",
-                    "Czechia",
-                    "Finland",
-                    "Georgia",
-                    "Greece",
-                    "Hungary",
-                    "Indonesia",
-                    "Italy",
-                    "Latvia",
-                    "Lithuania",
-                    "Montenegro",
-                    "N. Cyprus",
-                    "Poland",
-                    "Portugal",
-                    "Russia",
-                    "Serbia",
-                    "Spain",
-                    "Thailand",
-                    "Turkey",
-                    "United Arab Emirates",
-                    "United States of America",
-                    "Uzbekistan"
-                ],
-                "range": [
-                    "#e41a1c",
-                    "#377eb8",
-                    "#4daf4a",
-                    "#984ea3",
-                    "#ff7f00",
-                    "#ffff33",
-                    "#a65628",
-                    "#f781bf",
-                    "#999999",
-                    "#8dd3c7",
-                    "#bebada",
-                    "#fb8072",
-                    "#80b1d3",
-                    "#fdb462",
-                    "#b3de69",
-                    "#fccde5",
-                    "#c9c9c9",
-                    "#ffed6f",
-                    "#1f77b4",
-                    "#6a3d9a",
-                    "#b15928",
-                    "#7f7f7f",
-                    "#b2df8a",
-                    "#fdbf6f",
-                    "#cab2d6",
-                    "#17becf"
+        }
+    },
+    "layer": [
+        {
+            "params": [
+                {
+                    "name": "continent_highlight",
+                    "select": {
+                        "type": "point",
+                        "fields": [
+                            "continent"
+                        ]
+                    },
+                    "bind": "legend"
+                },
+                {
+                    "name": "size_highlight",
+                    "select": {
+                        "type": "point",
+                        "fields": [
+                            "rooms"
+                        ]
+                    },
+                    "bind": "legend"
+                }
+            ],
+            "mark": "circle",
+            "encoding": {
+                "size": {
+                    "field": "rooms",
+                    "type": "ordinal",
+                    "title": "Number of Rooms",
+                    "scale": {
+                        "range": [
+                            100,
+                            1000,
+                            10000
+                        ]
+                    }
+                },
+                "color": {
+                    "field": "continent",
+                    "type": "nominal",
+                    "title": "Continents",
+                    "scale": {
+                        "domain": [
+                            "North America",
+                            "Europe",
+                            "Asia",
+                            "Australia"
+                        ],
+                        "range": [
+                            "#0000FF",
+                            "#ff7f00",
+                            "#984ea3",
+                            "#a65628"
+                        ]
+                    }
+                },
+                "opacity": {
+                    "condition": {
+                        "test": {
+                            "and": [
+                                {
+                                    "param": "continent_highlight"
+                                },
+                                {
+                                    "param": "size_highlight"
+                                }
+                            ]
+                        },
+                        "value": 0.6
+                    },
+                    "value": 0.2
+                },
+                "tooltip": [
+                    {
+                        "field": "country",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "area",
+                        "title": "Total Area (m²)"
+                    },
+                    {
+                        "field": "rooms",
+                        "title": "Number of Rooms"
+                    },
+                    {
+                        "field": "min_price_in_USD",
+                        "title": "Property Price (USD)"
+                    },
+                    {
+                        "field": "continent",
+                        "title": "Continent"
+                    }
                 ]
             }
         },
-        "tooltip": [
-            {
-                "field": "country",
-                "title": "Country"
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -15,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
             },
-            {
-                "field": "area",
-                "title": "Total Area (m²)"
-            },
-            {
-                "field": "rooms",
-                "title": "Number of Rooms"
-            },
-            {
-                "field": "min_price_in_USD",
-                "title": "Property Price (USD)"
+            "encoding": {
+                "text": {
+                    "field": "country",
+                    "type": "nominal"
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "(datum['country'] == 'Australia' || datum['country'] == 'United Arab Emirates'|| datum['country'] == 'Turkey'|| datum['country'] == 'Finland'|| datum['country'] == 'Russia'|| datum['country'] == 'United States of America'|| datum['country'] == 'Indonesia' || datum['country'] == 'Thailand') && continent_highlight",
+                        "value": 1
+                    },
+                    "value": 0
+                }
             }
-        ]
-    }
+        }
+    ]
 }
