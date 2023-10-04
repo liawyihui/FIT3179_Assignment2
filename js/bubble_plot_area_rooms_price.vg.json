@@ -19,7 +19,7 @@
         "y": {
             "field": "min_price_in_USD",
             "type": "quantitative",
-            "title": "Minimum Property Price (USD)"
+            "title": "Property Price (USD)"
             
         },
         "size": {
@@ -30,7 +30,8 @@
         "color": {
             "field": "country",
             "type": "nominal",
-            "title": "Country"
+            "title": "Country",
+            "scale": {"scheme": "sinebow"} 
         },
         "tooltip": [
             {
@@ -47,7 +48,7 @@
             },
             {
                 "field": "min_price_in_USD",
-                "title": "Minimum Property Price (USD)"
+                "title": "Property Price (USD)"
             }
         ]
     }
