@@ -4,7 +4,7 @@ vegaEmbed('#world_map', world_map, { "actions": false }).then(function(result) {
 }).catch(console.error);
 
 var property_distribution_bar_chart = "js/property_distribution_bar_chart.vg.json";
-vegaEmbed('#property_distribution_bar_chart', country_distribution_bar_chart, { "actions": false }).then(function(result) {
+vegaEmbed('#property_distribution_bar_chart', property_distribution_bar_chart, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
