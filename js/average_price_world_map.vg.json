@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Property Price Per Area in Countries",
+    "text": "Property Price per Area in Countries",
     "fontSize": 20
   },
   "width": 1000,
@@ -120,10 +120,7 @@
             "scheme": "oranges"
           },
           "legend": {
-            "title": [
-              "Property Price(USD)",
-              "per m²"
-            ],
+            "title": "Property Price(USD) per m²",
             "orient": "right",
             "titleFontSize": 12
           }

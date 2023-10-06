@@ -1,7 +1,15 @@
-h1{
+h1 {
     text-align: center;
 }
 
 #first-row {
     display: flex;
+}
+
+.world-map-container {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
