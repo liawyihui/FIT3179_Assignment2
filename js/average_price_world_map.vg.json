@@ -18,6 +18,14 @@
   },
   "params": [
     {
+      "name": "year_selection_checkbox",
+      "value": "true",
+      "bind": {
+        "input": "checkbox",
+        "name": "Disable/Enable year slider?"
+      }
+    },
+    {
       "name": "year_selection",
       "value": 2023,
       "bind": {
@@ -26,6 +34,27 @@
         "max": 2027,
         "step": 1,
         "name": "Property Construction Year: "
+      }
+    },
+    {
+      "name": "continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "Europe",
+          "Asia",
+          "Australia"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "Europe",
+          "Asia",
+          "Australia"
+        ],
+        "name": "Continent Selection: "
       }
     }
   ],
@@ -99,7 +128,7 @@
           "as": "average_price_in_USD"
         },
         {
-          "filter": "datum.building_construction_year == year_selection"
+          "filter": "((year_selection_checkbox == 'true' && datum.building_construction_year == year_selection) || (year_selection_checkbox == 'false' && datum.building_construction_year == 'null')) && (continent_selection == datum.continent || continent_selection == null)"
         }
       ],
       "mark": {
@@ -117,6 +146,15 @@
           "type": "quantitative",
           "title": "Average Property Price(USD)",
           "scale": {
+            "domain": [
+              1000,
+              2000,
+              3000,
+              4000,
+              6000,
+              10000,
+              20000
+            ],
             "scheme": "oranges"
           },
           "legend": {
@@ -136,9 +174,19 @@
             "type": "quantitative",
             "title": "Property Price(USD) per m²",
             "format": ".0f"
+          },
+          {
+            "field": "building_construction_year",
+            "type": "nominal",
+            "title": "Property Construction Year"
           }
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
 }
