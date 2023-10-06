@@ -128,7 +128,7 @@
           "as": "average_price_in_USD"
         },
         {
-          "filter": "((year_selection_checkbox && datum.building_construction_year == year_selection) || (!year_selection_checkbox && datum.building_construction_year == 0)) && (continent_selection == datum.continent || continent_selection == null)"
+          "filter": "((year_selection_checkbox && datum.building_construction_year == year_selection) || (!year_selection_checkbox && datum.building_construction_year == 'All years')) && (continent_selection == datum.continent || continent_selection == null)"
         }
       ],
       "mark": {
