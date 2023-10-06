@@ -7,7 +7,7 @@
     "width": 500,
     "height": 300,
     "data": {
-        "url": "https://raw.githubusercontent.com/liawyihui/3179/main/data/aggregated_world_data.csv"
+        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/property_distribution.csv"
     },
     "transform": [
         {
