@@ -101,7 +101,7 @@
       "mark": {
         "type": "geoshape",
         "fill": null,
-        "stroke": "lightgray"
+        "stroke": "darkgray"
       }
     },
     {
@@ -128,7 +128,7 @@
           "as": "average_price_in_USD"
         },
         {
-          "filter": "((year_selection_checkbox == 'true' && datum.building_construction_year == year_selection) || (year_selection_checkbox == 'false' && datum.building_construction_year == 'null')) && (continent_selection == datum.continent || continent_selection == null)"
+          "filter": "((year_selection_checkbox && datum.building_construction_year == year_selection) || (!year_selection_checkbox && datum.building_construction_year == 0)) && (continent_selection == datum.continent || continent_selection == null)"
         }
       ],
       "mark": {

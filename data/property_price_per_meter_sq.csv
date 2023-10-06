@@ -1,13 +1,13 @@
 country,building_construction_year,average_price,average_area,continent
 Australia,2025,559000,120,Australia
-Australia,,559000,120,Australia
+Australia,All years,559000,120,Australia
 Austria,2015,469307,101,Europe
 Austria,2018,869543,142,Europe
 Austria,2020,786066,56,Europe
 Austria,2021,376694,60,Europe
 Austria,2022,453191,92,Europe
 Austria,2023,447037,69,Europe
-Austria,,464706,81,Europe
+Austria,All years,464706,81,Europe
 Belarus,2010,107016,104,Europe
 Belarus,2011,104514,103,Europe
 Belarus,2012,142432,110,Europe
@@ -25,7 +25,7 @@ Belarus,2023,76033,77,Europe
 Belarus,2024,88051,67,Europe
 Belarus,2025,76194,55,Europe
 Belarus,2027,42865,36,Europe
-Belarus,,98199,93,Europe
+Belarus,All years,98199,93,Europe
 Croatia,2010,556993,170,Europe
 Croatia,2011,624772,152,Europe
 Croatia,2012,540757,172,Europe
@@ -41,19 +41,19 @@ Croatia,2021,427461,137,Europe
 Croatia,2022,460874,119,Europe
 Croatia,2023,495662,124,Europe
 Croatia,2024,409217,100,Europe
-Croatia,,516185,135,Europe
+Croatia,All years,516185,135,Europe
 Cyprus,2022,116627,97,Europe
 Cyprus,2023,160164,75,Europe
 Cyprus,2024,191492,91,Europe
 Cyprus,2025,239020,85,Europe
 Cyprus,2026,185606,70,Europe
-Cyprus,,196386,84,Europe
+Cyprus,All years,196386,84,Europe
 Czechia,2023,376662,78,Europe
 Czechia,2024,308436,49,Europe
-Czechia,,353920,68,Europe
+Czechia,All years,353920,68,Europe
 Finland,2019,723039,104,Europe
 Finland,2023,408825,115,Europe
-Finland,,471668,113,Europe
+Finland,All years,471668,113,Europe
 Georgia,2012,581000,720,Europe
 Georgia,2015,57143,28,Europe
 Georgia,2016,315869,90,Europe
@@ -68,7 +68,7 @@ Georgia,2024,69168,47,Europe
 Georgia,2025,91450,55,Europe
 Georgia,2026,86463,55,Europe
 Georgia,2027,68038,43,Europe
-Georgia,,86886,54,Europe
+Georgia,All years,86886,54,Europe
 Greece,2010,529268,205,Europe
 Greece,2011,712900,219,Europe
 Greece,2012,674324,226,Europe
@@ -85,7 +85,7 @@ Greece,2022,594399,128,Europe
 Greece,2023,459016,118,Europe
 Greece,2024,414799,96,Europe
 Greece,2025,1497394,160,Europe
-Greece,,619441,180,Europe
+Greece,All years,619441,180,Europe
 Hungary,2010,284360,198,Europe
 Hungary,2011,302599,214,Europe
 Hungary,2012,372287,211,Europe
@@ -99,13 +99,13 @@ Hungary,2019,174132,99,Europe
 Hungary,2020,163357,97,Europe
 Hungary,2021,159375,81,Europe
 Hungary,2022,145900,70,Europe
-Hungary,,176259,103,Europe
+Hungary,All years,176259,103,Europe
 Indonesia,2022,477911,101,Asia
 Indonesia,2023,300067,87,Asia
 Indonesia,2024,279362,84,Asia
 Indonesia,2025,365126,87,Asia
 Indonesia,2026,355200,74,Asia
-Indonesia,,304614,85,Asia
+Indonesia,All years,304614,85,Asia
 Italy,2010,622975,112,Europe
 Italy,2011,601923,136,Europe
 Italy,2012,1072329,185,Europe
@@ -121,7 +121,7 @@ Italy,2021,1062916,160,Europe
 Italy,2022,824724,166,Europe
 Italy,2023,856734,159,Europe
 Italy,2024,1515824,295,Europe
-Italy,,1027563,190,Europe
+Italy,All years,1027563,190,Europe
 Latvia,2010,287085,124,Europe
 Latvia,2011,741840,143,Europe
 Latvia,2012,521148,231,Europe
@@ -137,7 +137,7 @@ Latvia,2021,684423,155,Europe
 Latvia,2022,394778,125,Europe
 Latvia,2023,373106,106,Europe
 Latvia,2024,318470,117,Europe
-Latvia,,580908,147,Europe
+Latvia,All years,580908,147,Europe
 Lithuania,2010,248626,158,Europe
 Lithuania,2011,246607,160,Europe
 Lithuania,2012,309764,168,Europe
@@ -154,7 +154,7 @@ Lithuania,2022,232582,104,Europe
 Lithuania,2023,188413,95,Europe
 Lithuania,2024,143695,53,Europe
 Lithuania,2028,227168,55,Europe
-Lithuania,,233533,111,Europe
+Lithuania,All years,233533,111,Europe
 Montenegro,2010,301338,117,Europe
 Montenegro,2011,284993,119,Europe
 Montenegro,2012,278533,134,Europe
@@ -171,7 +171,7 @@ Montenegro,2022,319305,104,Europe
 Montenegro,2023,264425,91,Europe
 Montenegro,2024,279370,79,Europe
 Montenegro,2025,304550,79,Europe
-Montenegro,,355264,118,Europe
+Montenegro,All years,355264,118,Europe
 N. Cyprus,2010,129652,130,Europe
 N. Cyprus,2016,285536,105,Europe
 N. Cyprus,2017,179245,63,Europe
@@ -185,7 +185,7 @@ N. Cyprus,2024,199460,86,Europe
 N. Cyprus,2025,220287,88,Europe
 N. Cyprus,2026,242875,81,Europe
 N. Cyprus,2027,222792,94,Europe
-N. Cyprus,,199337,85,Europe
+N. Cyprus,All years,199337,85,Europe
 Poland,2010,434123,114,Europe
 Poland,2011,547906,119,Europe
 Poland,2012,366484,115,Europe
@@ -201,7 +201,7 @@ Poland,2021,404611,90,Europe
 Poland,2022,390513,104,Europe
 Poland,2023,156675,56,Europe
 Poland,2024,297664,69,Europe
-Poland,,478734,104,Europe
+Poland,All years,478734,104,Europe
 Portugal,2010,257506,68,Europe
 Portugal,2011,593154,256,Europe
 Portugal,2012,484967,244,Europe
@@ -214,7 +214,7 @@ Portugal,2022,782024,194,Europe
 Portugal,2023,672784,120,Europe
 Portugal,2024,494549,143,Europe
 Portugal,2025,2019540,445,Europe
-Portugal,,804114,177,Europe
+Portugal,All years,804114,177,Europe
 Russia,2010,704358,216,Europe
 Russia,2011,392737,106,Europe
 Russia,2012,363467,269,Europe
@@ -232,14 +232,14 @@ Russia,2023,193719,78,Europe
 Russia,2024,139132,48,Europe
 Russia,2025,122723,48,Europe
 Russia,2026,129654,49,Europe
-Russia,,137405,52,Europe
+Russia,All years,137405,52,Europe
 Serbia,2010,102283,40,Europe
 Serbia,2014,123850,48,Europe
 Serbia,2019,108988,39,Europe
 Serbia,2022,315209,74,Europe
 Serbia,2023,106276,54,Europe
 Serbia,2024,146942,57,Europe
-Serbia,,133804,54,Europe
+Serbia,All years,133804,54,Europe
 Spain,2010,443999,206,Europe
 Spain,2011,304042,99,Europe
 Spain,2012,347386,125,Europe
@@ -257,7 +257,7 @@ Spain,2023,621398,132,Europe
 Spain,2024,661008,130,Europe
 Spain,2025,704316,130,Europe
 Spain,2026,1025812,150,Europe
-Spain,,722103,147,Europe
+Spain,All years,722103,147,Europe
 Thailand,2010,124663,54,Asia
 Thailand,2011,151476,56,Asia
 Thailand,2012,231988,66,Asia
@@ -276,7 +276,7 @@ Thailand,2025,317665,65,Asia
 Thailand,2026,143754,39,Asia
 Thailand,2027,329881,52,Asia
 Thailand,2028,87785,35,Asia
-Thailand,,263725,57,Asia
+Thailand,All years,263725,57,Asia
 Turkey,2010,260239,164,Asia
 Turkey,2011,261226,151,Asia
 Turkey,2012,300080,159,Asia
@@ -295,7 +295,7 @@ Turkey,2024,263163,100,Asia
 Turkey,2025,432596,117,Asia
 Turkey,2026,96283,66,Asia
 Turkey,2027,115160,49,Asia
-Turkey,,335048,121,Asia
+Turkey,All years,335048,121,Asia
 United Arab Emirates,2010,326788,836,Asia
 United Arab Emirates,2012,4779000,567,Asia
 United Arab Emirates,2017,285000,65,Asia
@@ -310,7 +310,7 @@ United Arab Emirates,2025,1001357,129,Asia
 United Arab Emirates,2026,1581173,164,Asia
 United Arab Emirates,2027,1063452,125,Asia
 United Arab Emirates,2028,1065571,92,Asia
-United Arab Emirates,,1010308,131,Asia
+United Arab Emirates,All years,1010308,131,Asia
 United States of America,2013,1256683,289,North America
 United States of America,2014,1601499,261,North America
 United States of America,2015,1669847,273,North America
@@ -322,11 +322,11 @@ United States of America,2020,1406175,256,North America
 United States of America,2021,1186154,263,North America
 United States of America,2022,852131,235,North America
 United States of America,2023,1467575,276,North America
-United States of America,,1234640,253,North America
+United States of America,All years,1234640,253,North America
 Uzbekistan,2020,435000,200,Asia
 Uzbekistan,2021,114693,60,Asia
 Uzbekistan,2022,83308,57,Asia
 Uzbekistan,2023,232347,110,Asia
 Uzbekistan,2024,57019,52,Asia
 Uzbekistan,2025,67563,63,Asia
-Uzbekistan,,102266,65,Asia
+Uzbekistan,All years,102266,65,Asia
