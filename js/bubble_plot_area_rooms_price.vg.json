@@ -152,7 +152,7 @@
                 },
                 "opacity": {
                     "condition": {
-                        "test": "(datum['country'] == 'Australia' || datum['country'] == 'United Arab Emirates'|| datum['country'] == 'Turkey'|| datum['country'] == 'Finland'|| datum['country'] == 'Russia'|| datum['country'] == 'United States of America'|| datum['country'] == 'Indonesia' || datum['country'] == 'Thailand') && continent_highlight",
+                        "test": "(datum['country'] == 'Australia' || datum['country'] == 'United Arab Emirates'|| datum['country'] == 'Turkey'|| datum['country'] == 'Finland'|| datum['country'] == 'Poland'|| datum['country'] == 'Austria'|| datum['country'] == 'Indonesia' || datum['country'] == 'Montenegro' || datum['country'] == 'Czechia' || datum['country'] == 'Spain') && continent_highlight",
                         "value": 1
                     },
                     "value": 0
