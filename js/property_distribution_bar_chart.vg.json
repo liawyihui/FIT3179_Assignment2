@@ -19,7 +19,7 @@
     ],
     "mark": {
         "type": "bar",
-        "color": "orange"
+        "color": "darkorange"
     },
     "encoding": {
         "x": {
