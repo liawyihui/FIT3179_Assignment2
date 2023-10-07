@@ -31,7 +31,7 @@
       "bind": {
         "input": "range",
         "min": 2010,
-        "max": 2027,
+        "max": 2028,
         "step": 1,
         "name": "Property Construction Year: "
       }

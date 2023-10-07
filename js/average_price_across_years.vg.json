@@ -1,53 +1,98 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average Property Price Across Building Construction Years",
+    "title": "Average Property Price of a House Across Property Construction Years",
     "width": 575,
     "height": 300,
     "data": {
-        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/world_real_estate.csv"
-    },
-    "transform": [
-        {
-            "aggregate": [
-                {
-                    "op": "average",
-                    "field": "price_in_USD",
-                    "as": "average_price"
-                }
-            ],
-            "groupby": [
-                "building_construction_year"
-            ]
-        }
-    ],
-    "mark": {
-        "type": "line",
-        "point": true,
-        "color": "darkblue"
-    },
-    "encoding": {
-        "x": {
-            "field": "building_construction_year",
-            "type": "ordinal",
-            "title": "Property Construction Year"
-        },
-        "y": {
-            "field": "average_price",
-            "type": "quantitative",
-            "title": "Average Price (USD)"
-        },
-        "tooltip": [
-            {
-                "field": "building_construction_year",
-                "type": "ordinal",
-                "title": "Building Construction Year"
-            },
-            {
-                "field": "average_price",
-                "type": "quantitative",
-                "title": "Average Property Price (USD)",
-                "format": ".0f"
+        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/average_price_per_house_across_years.csv",
+        "format": {
+            "parse": {
+                "year": "date:'%Y'"
             }
-        ]
-    }
+        }
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "rect",
+                "color": "lightgray"
+            },
+            "data": {
+                "values": [
+                    {
+                        "start": "2024",
+                        "end": "2028",
+                        "event": "Predicted"
+                    }
+                ],
+                "format": {
+                    "parse": {
+                        "start": "date:'%Y'",
+                        "end": "date:'%Y'"
+                    }
+                }
+            },
+            "encoding": {
+                "x": {
+                    "field": "start",
+                    "timeUnit": "year"
+                },
+                "x2": {
+                    "field": "end",
+                    "timeUnit": "year"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "line",
+                "point": true,
+                "color": "darkblue"
+            },
+            "encoding": {
+                "x": {
+                    "field": "year",
+                    "type": "ordinal",
+                    "title": "Property Construction Year"
+                },
+                "y": {
+                    "field": "price",
+                    "type": "quantitative",
+                    "title": "Average Price (USD)"
+                },
+                "strokeDash": {
+                    "field": "predicted",
+                    "type": "nominal",
+                    "legend": null
+                },
+                "tooltip": [
+                    {
+                        "field": "year",
+                        "type": "ordinal",
+                        "title": "Property Construction Year"
+                    },
+                    {
+                        "field": "price",
+                        "type": "quantitative",
+                        "title": "Average Property Price (USD)",
+                        "format": ".0f"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "color": "black",
+                "fontSize": 14,
+                "xOffset": 185,
+                "yOffset": -140
+            },
+            "encoding": {
+                "text": {
+                    "value": "Estimated"
+                }
+            }
+        }
+    ]
 }
