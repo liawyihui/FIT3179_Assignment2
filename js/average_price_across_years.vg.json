@@ -68,7 +68,7 @@
                 "tooltip": [
                     {
                         "field": "year",
-                        "type": "ordinal",
+                        "timeUnit": "year",
                         "title": "Property Construction Year"
                     },
                     {
