@@ -1,0 +1,273 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Parallel coordinates plot showing 7 dimensions of automobile statistics.",
+    "width": 700,
+    "height": 400,
+    "padding": 5,
+    "config": {
+        "axisY": {
+            "titleX": 48,
+            "titleY": 410,
+            "titleAngle": 0,
+            "titleAlign": "right",
+            "titleBaseline": "top"
+        }
+    },
+    "params": [
+        {
+            "name": "country_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Australia",
+                    "Austria",
+                    "Belarus",
+                    "Croatia",
+                    "Cyprus",
+                    "Czechia",
+                    "Finland",
+                    "Georgia",
+                    "Greece",
+                    "Hungary",
+                    "Indonesia",
+                    "Italy",
+                    "Latvia",
+                    "Lithuania",
+                    "Montenegro",
+                    "N. Cyprus",
+                    "Poland",
+                    "Portugal",
+                    "Russia",
+                    "Serbia",
+                    "Spain",
+                    "Thailand",
+                    "Turkey",
+                    "United Arab Emirates",
+                    "United States of America",
+                    "Uzbekistan"
+                ],
+                "labels": [
+                    "Australia",
+                    "Austria",
+                    "Belarus",
+                    "Croatia",
+                    "Cyprus",
+                    "Czechia",
+                    "Finland",
+                    "Georgia",
+                    "Greece",
+                    "Hungary",
+                    "Indonesia",
+                    "Italy",
+                    "Latvia",
+                    "Lithuania",
+                    "Montenegro",
+                    "N. Cyprus",
+                    "Poland",
+                    "Portugal",
+                    "Russia",
+                    "Serbia",
+                    "Spain",
+                    "Thailand",
+                    "Turkey",
+                    "United Arab Emirates",
+                    "United States of America",
+                    "Uzbekistan"
+                ],
+                "name": "Country Selection: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "country_selection == datum.country"
+        }
+    ],
+    "data": [
+        {
+            "name": "details",
+            "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/relationships_rooms_area_bedrooms_floors_price.csv",
+            "format": {
+                "type": "csv",
+                "delimiter": ","
+            }
+        },
+        {
+            "name": "fields",
+            "values": [
+                "apartment_rooms",
+                "apartment_total_area",
+                "apartment_bedrooms",
+                "building_total_floors",
+                "price_in_USD"
+            ]
+        }
+    ],
+    "scales": [
+        {
+            "name": "ord",
+            "type": "point",
+            "range": "width",
+            "round": true,
+            "domain": {
+                "data": "fields",
+                "field": "data"
+            }
+        },
+        {
+            "name": "apartment_rooms",
+            "type": "linear",
+            "range": "height",
+            "zero": false,
+            "nice": true,
+            "domain": {
+                "data": "details",
+                "field": "apartment_rooms"
+            }
+        },
+        {
+            "name": "apartment_total_area",
+            "type": "linear",
+            "range": "height",
+            "zero": false,
+            "nice": true,
+            "domain": {
+                "data": "details",
+                "field": "apartment_total_area"
+            }
+        },
+        {
+            "name": "apartment_bedrooms",
+            "type": "linear",
+            "range": "height",
+            "zero": false,
+            "nice": true,
+            "domain": {
+                "data": "details",
+                "field": "apartment_bedrooms"
+            }
+        },
+        {
+            "name": "building_total_floors",
+            "type": "linear",
+            "range": "height",
+            "zero": false,
+            "nice": true,
+            "domain": {
+                "data": "details",
+                "field": "building_total_floors"
+            }
+        },
+        {
+            "name": "price_in_USD",
+            "type": "linear",
+            "range": "height",
+            "zero": false,
+            "nice": true,
+            "domain": {
+                "data": "details",
+                "field": "price_in_USD"
+            }
+        }
+    ],
+    "axes": [
+        {
+            "orient": "left",
+            "zindex": 1,
+            "scale": "apartment_rooms",
+            "title": "Number of Rooms",
+            "offset": {
+                "scale": "ord",
+                "value": "apartment_rooms",
+                "mult": -1
+            }
+        },
+        {
+            "orient": "left",
+            "zindex": 1,
+            "scale": "apartment_total_area",
+            "title": "Total Area (m²)",
+            "offset": {
+                "scale": "ord",
+                "value": "apartment_total_area",
+                "mult": -1
+            }
+        },
+        {
+            "orient": "left",
+            "zindex": 1,
+            "scale": "apartment_bedrooms",
+            "title": "Number of bedrooms",
+            "offset": {
+                "scale": "ord",
+                "value": "apartment_bedrooms",
+                "mult": -1
+            }
+        },
+        {
+            "orient": "left",
+            "zindex": 1,
+            "scale": "building_total_floors",
+            "title": "Number of Floors",
+            "offset": {
+                "scale": "ord",
+                "value": "building_total_floors",
+                "mult": -1
+            }
+        },
+        {
+            "orient": "left",
+            "zindex": 1,
+            "scale": "price_in_USD",
+            "title": "Property Price (USD)",
+            "offset": {
+                "scale": "ord",
+                "value": "price_in_USD",
+                "mult": -1
+            }
+        }
+    ],
+    "marks": [
+        {
+            "type": "group",
+            "from": {
+                "data": "details"
+            },
+            "marks": [
+                {
+                    "type": "line",
+                    "from": {
+                        "data": "fields"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "ord",
+                                "field": "data"
+                            },
+                            "y": {
+                                "scale": {
+                                    "datum": "data"
+                                },
+                                "field": {
+                                    "parent": {
+                                        "datum": "data"
+                                    }
+                                }
+                            },
+                            "stroke": {
+                                "value": "steelblue"
+                            },
+                            "strokeWidth": {
+                                "value": 1.01
+                            },
+                            "strokeOpacity": {
+                                "value": 0.3
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
