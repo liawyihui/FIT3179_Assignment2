@@ -17,23 +17,103 @@
                 "step": 10000,
                 "name": "Minimum Property Price: "
             }
+        },
+        {
+            "name": "country_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Australia",
+                    "Austria",
+                    "Belarus",
+                    "Croatia",
+                    "Cyprus",
+                    "Czechia",
+                    "Finland",
+                    "Georgia",
+                    "Greece",
+                    "Hungary",
+                    "Indonesia",
+                    "Italy",
+                    "Latvia",
+                    "Lithuania",
+                    "Montenegro",
+                    "N. Cyprus",
+                    "Poland",
+                    "Portugal",
+                    "Russia",
+                    "Serbia",
+                    "Spain",
+                    "Thailand",
+                    "Turkey",
+                    "United Arab Emirates",
+                    "United States of America",
+                    "Uzbekistan"
+                ],
+                "labels": [
+                    "Show All",
+                    "Australia",
+                    "Austria",
+                    "Belarus",
+                    "Croatia",
+                    "Cyprus",
+                    "Czechia",
+                    "Finland",
+                    "Georgia",
+                    "Greece",
+                    "Hungary",
+                    "Indonesia",
+                    "Italy",
+                    "Latvia",
+                    "Lithuania",
+                    "Montenegro",
+                    "N. Cyprus",
+                    "Poland",
+                    "Portugal",
+                    "Russia",
+                    "Serbia",
+                    "Spain",
+                    "Thailand",
+                    "Turkey",
+                    "United Arab Emirates",
+                    "United States of America",
+                    "Uzbekistan"
+                ],
+                "name": "Country Selection: "
+            }
         }
     ],
     "transform": [
         {
             "filter": "datum.min_price_in_USD > Property_Price"
+        },
+        {
+            "filter": "country_selection == datum.country || country_selection == null"
         }
     ],
     "encoding": {
         "x": {
             "field": "area",
             "type": "quantitative",
-            "title": "Total Area (m²)"
+            "title": "Total Area (m²)",
+            "scale": {
+                "domain": [
+                    0,
+                    120
+                ]
+            }
         },
         "y": {
             "field": "min_price_in_USD",
             "type": "quantitative",
-            "title": "Property Price (USD)"
+            "title": "Property Price (USD)",
+            "scale": {
+                "domain": [
+                    0,
+                    600000
+                ]
+            }
         }
     },
     "layer": [

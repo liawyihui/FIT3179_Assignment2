@@ -29,7 +29,7 @@
         "x": {
             "field": "building_construction_year",
             "type": "ordinal",
-            "title": "Building Construction Year"
+            "title": "Property Construction Year"
         },
         "y": {
             "field": "average_price",
@@ -45,7 +45,7 @@
             {
                 "field": "average_price",
                 "type": "quantitative",
-                "title": "Average Price (USD)",
+                "title": "Average Property Price (USD)",
                 "format": ".0f"
             }
         ]
