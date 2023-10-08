@@ -211,7 +211,6 @@
       ],
       "mark": {
         "type": "text",
-        "fontSize": 12,
         "fontWeight": "bold"
       },
       "encoding": {
@@ -229,7 +228,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum.country == 'Turkey' || datum.country == 'Spain' || datum.country == 'Australia' || datum.country == 'Thailand' || datum.country == 'Indonesia' || datum.country == 'United States of America' || datum.country == 'Russia'",
+            "test": "datum.country == 'Turkey' || datum.country == 'Australia' || datum.country == 'Thailand' || datum.country == 'Indonesia' || datum.country == 'United States of America' || datum.country == 'Russia'",
             "value": 1
           },
           "value": 0
