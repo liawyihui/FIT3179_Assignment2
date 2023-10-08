@@ -253,5 +253,11 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "background": "#eaeaea"
+  }
 }

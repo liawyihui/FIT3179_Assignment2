@@ -15,7 +15,7 @@
         {
             "mark": {
                 "type": "rect",
-                "color": "lightgray"
+                "color": "orange"
             },
             "data": {
                 "values": [
@@ -94,5 +94,8 @@
                 }
             }
         }
-    ]
+    ],
+    "config": {
+        "background": "#eaeaea"
+    }
 }

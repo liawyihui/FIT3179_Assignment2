@@ -45,5 +45,8 @@
                 "title": "Number of Listings"
             }
         ]
+    },
+    "config": {
+        "background": "#ebe9e9"
     }
 }

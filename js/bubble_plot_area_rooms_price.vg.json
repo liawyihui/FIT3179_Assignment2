@@ -239,5 +239,8 @@
                 }
             }
         }
-    ]
+    ],
+    "config": {
+        "background": "#eaeaea"
+    }
 }

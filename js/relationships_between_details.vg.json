@@ -234,7 +234,7 @@
                                 "value": "steelblue"
                             },
                             "strokeWidth": {
-                                "value": 1
+                                "value": 1.5
                             },
                             "strokeOpacity": {
                                 "value": 0.5
@@ -243,6 +243,9 @@
                         "update": {
                             "stroke": {
                                 "value": "steelblue"
+                            },
+                            "strokeWidth": {
+                                "value": 1.5
                             },
                             "opacity": {
                                 "value": 0.5

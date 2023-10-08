@@ -9,7 +9,6 @@ h1 {
 .world-map-container {
     padding: 10px;
     margin-bottom: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
