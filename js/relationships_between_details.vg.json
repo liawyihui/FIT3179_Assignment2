@@ -1,13 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "description": "Parallel coordinates plot showing 7 dimensions of automobile statistics.",
+    "title": "Relationships between Rooms, Bedrooms, Floors, Areas and Property Price in Each Country",
     "width": 800,
-    "height": 600,
-    "padding": 5,
+    "height": 500,
     "config": {
         "axisY": {
             "titleX": 48,
-            "titleY": 610,
+            "titleY": 510,
             "titleAngle": 0,
             "titleAlign": "right",
             "titleBaseline": "top"
@@ -232,23 +231,87 @@
                                 }
                             },
                             "stroke": {
-                                "value": "lightblue"
+                                "value": "steelblue"
                             },
                             "strokeWidth": {
-                                "value": 1.5
-                            },
-                            "strokeOpacity": {
                                 "value": 1
                             },
-                            "update": {
-                              "strokeOpacity": {
-                                "value": 0
-                              }
-                            },
-                            "hover": {
-                              "strokeOpacity": {
+                            "strokeOpacity": {
                                 "value": 0.5
-                              }
+                            }
+                        },
+                        "update": {
+                            "stroke": {
+                                "value": "steelblue"
+                            },
+                            "opacity": {
+                                "value": 0.5
+                            }
+                        },
+                        "hover": {
+                            "stroke": {
+                                "value": "orange"
+                            },
+                            "strokeWidth": {
+                                "value": 2.5
+                            },
+                            "opacity": {
+                                "value": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "symbol",
+                    "from": {
+                        "data": "fields"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "ord",
+                                "field": "data"
+                            },
+                            "y": {
+                                "scale": {
+                                    "datum": "data"
+                                },
+                                "field": {
+                                    "parent": {
+                                        "datum": "data"
+                                    }
+                                }
+                            },
+                            "size": {
+                                "value": 40
+                            },
+                            "fill": {
+                                "value": "steelblue"
+                            },
+                            "stroke": {
+                                "value": "steelblue"
+                            }
+                        },
+                        "update": {
+                            "fill": {
+                                "value": "steelblue"
+                            },
+                            "stroke": {
+                                "value": "steelblue"
+                            },
+                            "opacity": {
+                                "value": 1
+                            }
+                        },
+                        "hover": {
+                            "fill": {
+                                "value": "orange"
+                            },
+                            "stroke": {
+                                "value": "orange"
+                            },
+                            "opacity": {
+                                "value": 1
                             }
                         }
                     }
