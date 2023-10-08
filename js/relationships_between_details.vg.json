@@ -32,7 +32,6 @@
                     "Indonesia",
                     "Italy",
                     "Latvia",
-                    "Lithuania",
                     "Montenegro",
                     "N. Cyprus",
                     "Poland",
@@ -240,6 +239,16 @@
                             },
                             "strokeOpacity": {
                                 "value": 1
+                            },
+                            "update": {
+                              "strokeOpacity": {
+                                "value": 0
+                              }
+                            },
+                            "hover": {
+                              "strokeOpacity": {
+                                "value": 0.5
+                              }
                             }
                         }
                     }
