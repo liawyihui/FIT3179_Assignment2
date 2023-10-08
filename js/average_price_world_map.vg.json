@@ -4,8 +4,8 @@
     "text": "Property Price per Area in Countries",
     "fontSize": 20
   },
-  "width": 800,
-  "height": 400,
+  "width": 1000,
+  "height": 500,
   "projection": {
     "type": "equalEarth"
   },
@@ -125,7 +125,7 @@
         },
         {
           "calculate": "datum.average_price/datum.average_area",
-          "as": "average_price_in_USD"
+          "as": "average_price_per_area"
         },
         {
           "filter": "((year_selection_checkbox && datum.building_construction_year == year_selection) || (!year_selection_checkbox && datum.building_construction_year == 'All years')) && (continent_selection == datum.continent || continent_selection == null)"
@@ -142,11 +142,10 @@
           "type": "geojson"
         },
         "color": {
-          "field": "average_price_in_USD",
+          "field": "average_price_per_area",
           "type": "quantitative",
           "title": "Average Property Price(USD)",
           "scale": {
-            "type": "threshold",
             "domain": [
               1000,
               2000,
@@ -171,7 +170,78 @@
             "title": "Country"
           },
           {
-            "field": "average_price_in_USD",
+            "field": "average_price_per_area",
+            "type": "quantitative",
+            "title": "Property Price(USD) per m²",
+            "format": ".0f"
+          },
+          {
+            "field": "building_construction_year",
+            "type": "nominal",
+            "title": "Property Construction Year"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/property_price_per_meter_sq.csv"
+      },
+      "transform": [
+        {
+          "lookup": "country",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/data/countryInfo.csv"
+            },
+            "key": "name",
+            "fields": [
+              "latitude",
+              "longitude"
+            ]
+          }
+        },
+        {
+          "calculate": "datum.average_price/datum.average_area",
+          "as": "average_price_per_area"
+        },
+        {
+          "filter": "((year_selection_checkbox && datum.building_construction_year == year_selection) || (!year_selection_checkbox && datum.building_construction_year == 'All years')) && (continent_selection == datum.continent || continent_selection == null)"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country",
+          "type": "nominal"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum.country == 'Turkey' || datum.country == 'Spain' || datum.country == 'Australia' || datum.country == 'Thailand' || datum.country == 'Indonesia' || datum.country == 'United States of America' || datum.country == 'Russia'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "average_price_per_area",
             "type": "quantitative",
             "title": "Property Price(USD) per m²",
             "format": ".0f"
@@ -184,10 +254,5 @@
         ]
       }
     }
-  ],
-  "config": {
-    "view": {
-      "stroke": "transparent"
-    }
-  }
+  ]
 }
