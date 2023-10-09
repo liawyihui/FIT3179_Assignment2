@@ -108,10 +108,14 @@
             "field": "min_price_in_USD",
             "type": "quantitative",
             "title": "Property Price (USD)",
+            "axis": {
+                "tickCount": 3
+            },
             "scale": {
+                "type": "log",
                 "domain": [
-                    0,
-                    600000
+                    1000,
+                    1000000
                 ]
             }
         }
