@@ -237,7 +237,7 @@
                                 }
                             },
                             "stroke": {
-                                "value": "steelblue"
+                                "value": "blue"
                             },
                             "strokeWidth": {
                                 "value": 1.5
@@ -248,7 +248,7 @@
                         },
                         "update": {
                             "stroke": {
-                                "value": "steelblue"
+                                "value": "blue"
                             },
                             "strokeWidth": {
                                 "value": 1.5
@@ -295,18 +295,18 @@
                                 "value": 40
                             },
                             "fill": {
-                                "value": "steelblue"
+                                "value": "blue"
                             },
                             "stroke": {
-                                "value": "steelblue"
+                                "value": "blue"
                             }
                         },
                         "update": {
                             "fill": {
-                                "value": "steelblue"
+                                "value": "blue"
                             },
                             "stroke": {
-                                "value": "steelblue"
+                                "value": "blue"
                             },
                             "opacity": {
                                 "value": 1
