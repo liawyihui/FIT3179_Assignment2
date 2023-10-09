@@ -1,8 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Comparison of Minimum Property Prices, Room Count, and Area Across Countries",
-    "width": 575,
-    "height": 300,
+    "title": {
+        "text": "Comparison of Minimum Property Prices, Rooms, and Area Across Countries",
+        "fontSize": 18
+    },
+    "width": 1020,
+    "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/min_price_by_country.csv"
     },

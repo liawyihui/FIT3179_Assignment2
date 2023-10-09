@@ -4,8 +4,8 @@
     "text": "Property Price per Area in Countries",
     "fontSize": 20
   },
-  "width": 1000,
-  "height": 500,
+  "width": 1030,
+  "height": 400,
   "projection": {
     "type": "equalEarth"
   },

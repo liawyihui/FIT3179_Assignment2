@@ -1,7 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average Property Price of a House Across Property Construction Years",
-    "width": 575,
+    "title": {
+        "text": [
+            "Average Property Price of a House and Number of Listings",
+            "Across Property Construction Years"
+        ],
+        "fontSize": 18
+    },
+    "width": 600,
     "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/average_price_per_house_across_years.csv",
@@ -45,8 +51,45 @@
         },
         {
             "mark": {
+                "type": "bar",
+                "color": "mediumturquoise",
+                "size": 10
+            },
+            "encoding": {
+                "x": {
+                    "field": "year",
+                    "type": "ordinal",
+                    "title": "Property Construction Year"
+                },
+                "y": {
+                    "field": "count",
+                    "type": "quantitative",
+                    "title": "Number of Listings",
+                    "axis": {
+                        "titleColor": "mediumturquoise"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "year",
+                        "timeUnit": "year",
+                        "title": "Property Construction Year"
+                    },
+                    {
+                        "field": "count",
+                        "type": "quantitative",
+                        "title": "Number of Listings"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
                 "type": "line",
-                "point": true,
+                "point": {
+                    "filled": true,
+                    "size": 100
+                },
                 "color": "darkblue"
             },
             "encoding": {
@@ -58,7 +101,10 @@
                 "y": {
                     "field": "price",
                     "type": "quantitative",
-                    "title": "Average Price (USD)"
+                    "title": "Average Price (USD)",
+                    "axis": {
+                        "titleColor": "darkblue"
+                    }
                 },
                 "strokeDash": {
                     "field": "predicted",
@@ -84,8 +130,8 @@
             "mark": {
                 "type": "text",
                 "color": "black",
-                "fontSize": 14,
-                "xOffset": 185,
+                "fontSize": 12,
+                "xOffset": 205,
                 "yOffset": -140
             },
             "encoding": {
@@ -95,6 +141,11 @@
             }
         }
     ],
+    "resolve": {
+        "scale": {
+            "y": "independent"
+        }
+    },
     "config": {
         "background": "#eaeaea"
     }
