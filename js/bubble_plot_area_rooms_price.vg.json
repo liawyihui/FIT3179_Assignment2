@@ -1,9 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Comparison of Minimum Property Prices, Rooms, and Area Across Countries",
-        "fontSize": 18
-    },
     "width": 1020,
     "height": 400,
     "data": {
