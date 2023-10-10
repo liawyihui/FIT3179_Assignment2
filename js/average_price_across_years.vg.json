@@ -131,12 +131,15 @@
                 "type": "text",
                 "color": "black",
                 "fontSize": 12,
-                "xOffset": 205,
+                "xOffset": 220,
                 "yOffset": -140
             },
             "encoding": {
                 "text": {
                     "value": "Estimated"
+                },
+                "opacity": {
+                    "value": 0.2
                 }
             }
         }
