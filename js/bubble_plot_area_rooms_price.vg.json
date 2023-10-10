@@ -4,7 +4,7 @@
         "text": "Comparison of Minimum Property Prices, Rooms, and Area Across Countries",
         "fontSize": 18
     },
-    "width": 1020,
+    "width": 1000,
     "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/min_price_by_country.csv"
@@ -239,10 +239,154 @@
                 },
                 "opacity": {
                     "condition": {
-                        "test": "(datum['country'] == 'Australia' || datum['country'] == 'United Arab Emirates'|| datum['country'] == 'Turkey'|| datum['country'] == 'Finland'|| datum['country'] == 'Poland'|| datum['country'] == 'Austria'|| datum['country'] == 'Indonesia' || datum['country'] == 'Montenegro' || datum['country'] == 'Czechia' || datum['country'] == 'Spain') && continent_highlight",
+                        "test": "(datum['country'] == 'Belarus' || datum['country'] == 'Australia' || datum['country'] == 'United Arab Emirates'|| datum['country'] == 'Turkey'|| datum['country'] == 'Finland'|| datum['country'] == 'Poland'|| datum['country'] == 'Austria'|| datum['country'] == 'Indonesia' || datum['country'] == 'Montenegro' || datum['country'] == 'Czechia' || datum['country'] == 'Spain') && continent_highlight",
                         "value": 1
                     },
                     "value": 0
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": 140,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "country",
+                    "type": "nominal"
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['country'] == 'United States of America' && continent_highlight",
+                        "value": 1
+                    },
+                    "value": 0
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": 50,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "country",
+                    "type": "nominal"
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['country'] == 'Cyprus' && continent_highlight",
+                        "value": 1
+                    },
+                    "value": 0
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": -100,
+                "dy": 20,
+                "fontSize": 12,
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "text": {
+                    "value": [
+                        "Belarus has the lowest minimum property",
+                        "price with 2 rooms and total area of 29 m²",
+                        "among all the countries."
+                    ]
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['country'] == 'Belarus' && continent_highlight",
+                        "value": 1
+                    },
+                    "value": 0
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": -230,
+                "dy": -60,
+                "fontSize": 12,
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "text": {
+                    "value": [
+                        "Finland has the second highest minimum",
+                        "property price with the most number",
+                        "of rooms and second biggest total area",
+                        "among all the countries."
+                    ]
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['country'] == 'Finland' && continent_highlight",
+                        "value": 1
+                    },
+                    "value": 0
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "xOffset": -240,
+                "yOffset": 280,
+                "fontSize": 12,
+                "fontWeight": "bold"
+            },
+            "transform": [
+                {
+                    "filter": "datum.country == 'Australia' && country_selection == null"
+                }
+            ],
+            "encoding": {
+                "text": {
+                    "value": [
+                        "There is a positive correlation between",
+                        "the minimum property price, the number",
+                        " of rooms and the total area of a property.",
+                        "Countries with higher minimum property",
+                        "prices tend to have properties with more",
+                        "rooms and a larger total area."
+                    ]
+                },
+                "color": {
+                    "value": "black"
                 }
             }
         }
