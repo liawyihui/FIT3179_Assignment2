@@ -21,7 +21,7 @@
     "signals": [
         {
             "name": "selectedCountry",
-            "value": "Austria",
+            "value": "United Arab Emirates",
             "bind": {
                 "input": "select",
                 "options": [
@@ -220,6 +220,9 @@
                     "from": {
                         "data": "fields"
                     },
+                    "tooltip": {
+                        "signal": "{'Number of Rooms': datum.datum.apartment_rooms, 'Number of Bedrooms': datum.datum.apartment_bedrooms, 'Number of Floors': datum.datum.building_total_floors, 'Total Area (m²)': datum.datum.apartment_total_area, 'Property Price (USD)': datum.datum.price_in_USD}"
+                    },
                     "encode": {
                         "enter": {
                             "x": {
@@ -237,7 +240,7 @@
                                 }
                             },
                             "stroke": {
-                                "value": "blue"
+                                "value": "steelblue"
                             },
                             "strokeWidth": {
                                 "value": 1.5
@@ -248,7 +251,7 @@
                         },
                         "update": {
                             "stroke": {
-                                "value": "blue"
+                                "value": "steelblue"
                             },
                             "strokeWidth": {
                                 "value": 1.5
@@ -295,18 +298,18 @@
                                 "value": 40
                             },
                             "fill": {
-                                "value": "blue"
+                                "value": "steelblue"
                             },
                             "stroke": {
-                                "value": "blue"
+                                "value": "steelblue"
                             }
                         },
                         "update": {
                             "fill": {
-                                "value": "blue"
+                                "value": "steelblue"
                             },
                             "stroke": {
-                                "value": "blue"
+                                "value": "steelblue"
                             },
                             "opacity": {
                                 "value": 1
