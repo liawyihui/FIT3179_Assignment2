@@ -364,14 +364,14 @@
                 "type": "text",
                 "align": "left",
                 "baseline": "middle",
-                "xOffset": -240,
-                "yOffset": 280,
-                "fontSize": 12,
+                "xOffset": -295,
+                "yOffset": 270,
+                "fontSize": 15,
                 "fontWeight": "bold"
             },
             "transform": [
                 {
-                    "filter": "datum.country == 'Australia' && country_selection == null"
+                    "filter": "datum.country == 'Australia' && country_selection == null && Property_Price == 0"
                 }
             ],
             "encoding": {

@@ -103,7 +103,8 @@
                     "type": "quantitative",
                     "title": "Average Price (USD)",
                     "axis": {
-                        "titleColor": "darkblue"
+                        "titleColor": "darkblue",
+                        "grid": true
                     }
                 },
                 "strokeDash": {
