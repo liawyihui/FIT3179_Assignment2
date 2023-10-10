@@ -1,5 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": [
+            "Average Property Price of a House and Number of Listings",
+            "Across Property Construction Years"
+        ],
+        "fontSize": 18
+    },
     "width": 600,
     "height": 300,
     "data": {
