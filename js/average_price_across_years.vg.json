@@ -21,7 +21,7 @@
         {
             "mark": {
                 "type": "rect",
-                "color": "orange"
+                "color": "lightgray"
             },
             "data": {
                 "values": [
@@ -68,19 +68,7 @@
                     "axis": {
                         "titleColor": "mediumturquoise"
                     }
-                },
-                "tooltip": [
-                    {
-                        "field": "year",
-                        "timeUnit": "year",
-                        "title": "Property Construction Year"
-                    },
-                    {
-                        "field": "count",
-                        "type": "quantitative",
-                        "title": "Number of Listings"
-                    }
-                ]
+                }
             }
         },
         {
@@ -111,20 +99,7 @@
                     "field": "predicted",
                     "type": "nominal",
                     "legend": null
-                },
-                "tooltip": [
-                    {
-                        "field": "year",
-                        "timeUnit": "year",
-                        "title": "Property Construction Year"
-                    },
-                    {
-                        "field": "price",
-                        "type": "quantitative",
-                        "title": "Average Property Price (USD)",
-                        "format": ".0f"
-                    }
-                ]
+                }
             }
         },
         {
@@ -143,6 +118,59 @@
                     "value": 0.2
                 }
             }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "tooltip": true
+            },
+            "encoding": {
+                "opacity": {
+                    "condition": {
+                        "value": 1,
+                        "param": "hover",
+                        "empty": false
+                    },
+                    "value": 0
+                },
+                "x": {
+                    "field": "year",
+                    "type": "ordinal",
+                    "title": "Property Construction Year"
+                },
+                "tooltip": [
+                    {
+                        "field": "year",
+                        "timeUnit": "year",
+                        "title": "Property Construction Year"
+                    },
+                    {
+                        "field": "price",
+                        "type": "quantitative",
+                        "title": "Average Property Price (USD)",
+                        "format": ".0f"
+                    },
+                    {
+                        "field": "count",
+                        "type": "quantitative",
+                        "title": "Number of Listings"
+                    }
+                ]
+            },
+            "params": [
+                {
+                    "name": "hover",
+                    "select": {
+                        "type": "point",
+                        "fields": [
+                            "year"
+                        ],
+                        "nearest": true,
+                        "on": "mouseover",
+                        "clear": "mouseout"
+                    }
+                }
+            ]
         }
     ],
     "resolve": {
