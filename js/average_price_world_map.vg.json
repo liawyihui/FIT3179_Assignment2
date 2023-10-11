@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Average Property Price per Area in Countries",
-    "fontSize": 20
+    "fontSize": 26
   },
   "width": 1030,
   "height": 450,

@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Average Property Price and Listings Across Property Construction Years",
-        "fontSize": 19
+        "fontSize": 24
     },
     "width": 780,
     "height": 300,
