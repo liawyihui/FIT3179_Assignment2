@@ -203,7 +203,8 @@
                     },
                     {
                         "field": "area",
-                        "title": "Total Area (m²)"
+                        "title": "Total Area (m²)",
+                        "format": ",.0f"
                     },
                     {
                         "field": "rooms",
@@ -211,9 +212,10 @@
                     },
                     {
                         "field": "min_price_in_USD",
-                        "title": "Property Price (USD)"
+                        "title": "Property Price (USD)",
+                        "format": ",.0f"
                     },
-                    {
+                    {   
                         "field": "continent",
                         "title": "Continent"
                     }

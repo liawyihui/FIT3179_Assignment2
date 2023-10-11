@@ -177,7 +177,7 @@
             "field": "average_price_per_area",
             "type": "quantitative",
             "title": "Property Price(USD) per m²",
-            "format": ".0f"
+            "format": ",.0f"
           },
           {
             "field": "building_construction_year",
@@ -446,7 +446,7 @@
             "field": "average_price_per_area",
             "type": "quantitative",
             "title": "Property Price(USD) per m²",
-            "format": ".0f"
+            "format": ",.0f"
           },
           {
             "field": "building_construction_year",

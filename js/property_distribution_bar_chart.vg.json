@@ -42,7 +42,8 @@
             {
                 "field": "count",
                 "type": "quantitative",
-                "title": "Number of Listings"
+                "title": "Number of Listings",
+                "format": ",.0f"
             }
         ]
     },

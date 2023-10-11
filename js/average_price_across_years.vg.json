@@ -153,12 +153,13 @@
                         "field": "price",
                         "type": "quantitative",
                         "title": "Average Property Price (USD)",
-                        "format": ".0f"
+                        "format": ",.0f"
                     },
                     {
                         "field": "count",
                         "type": "quantitative",
-                        "title": "Number of Listings"
+                        "title": "Number of Listings",
+                        "format": ",.0f"
                     }
                 ]
             },
