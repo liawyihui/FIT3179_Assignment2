@@ -216,6 +216,37 @@
             },
             "marks": [
                 {
+                    "type": "text",
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "value": 555
+                            },
+                            "y": {
+                                "value": 20
+                            },
+                            "align": {
+                                "value": "center"
+                            },
+                            "baseline": {
+                                "value": "top"
+                            },
+                            "text": {
+                                "signal": "selectedCountry"
+                            },
+                            "fontSize": {
+                                "value": 40
+                            },
+                            "strokeOpacity": {
+                                "value": 0.02
+                            },
+                            "fill": {
+                                "value": "lightgray"
+                            }
+                        }
+                    }
+                },
+                {
                     "type": "line",
                     "from": {
                         "data": "fields"
@@ -335,34 +366,6 @@
                     }
                 }
             ]
-        },
-        {
-            "type": "text",
-            "encode": {
-                "enter": {
-                    "x": {
-                        "value": 555
-                    },
-                    "y": {
-                        "value": 20
-                    },
-                    "align": {
-                        "value": "center"
-                    },
-                    "baseline": {
-                        "value": "top"
-                    },
-                    "text": {
-                        "signal": "selectedCountry"
-                    },
-                    "fontSize": {
-                        "value": 50
-                    },
-                    "opacity": {
-                        "value": 0.2
-                    }
-                }
-            }
         }
     ]
 }
