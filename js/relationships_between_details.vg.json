@@ -220,9 +220,6 @@
                     "from": {
                         "data": "fields"
                     },
-                    "tooltip": {
-                        "signal": "{'Number of Rooms': datum.datum.apartment_rooms, 'Number of Bedrooms': datum.datum.apartment_bedrooms, 'Number of Floors': datum.datum.building_total_floors, 'Total Area (m²)': datum.datum.apartment_total_area, 'Property Price (USD)': datum.datum.price_in_USD}"
-                    },
                     "encode": {
                         "enter": {
                             "x": {
@@ -270,6 +267,9 @@
                             "opacity": {
                                 "value": 1
                             }
+                        },
+                        "tooltip": {
+                            "signal": "{'Number of Rooms': datum.datum.apartment_rooms, 'Number of Bedrooms': datum.datum.apartment_bedrooms, 'Number of Floors': datum.datum.building_total_floors, 'Total Area (m²)': datum.datum.apartment_total_area, 'Property Price (USD)': datum.datum.price_in_USD}"
                         }
                     }
                 },
