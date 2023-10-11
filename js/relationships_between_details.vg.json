@@ -1,10 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "title": {
-        "text": [
-            "Relationships between Rooms, Bedrooms, Floors, Areas and",
-            "Property Price in Each Country"
-        ],
+        "text": "Relationships between Rooms, Bedrooms, Floors, Areas and Property Price in Each Country",
         "fontSize": 18
     },
     "width": 1110,

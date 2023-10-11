@@ -1,13 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": [
-            "Average Property Price of a House and Number of Listings",
-            "Across Property Construction Years"
-        ],
-        "fontSize": 18
+        "text": "Average Property Price and Listings Across Property Construction Years",
+        "fontSize": 19
     },
-    "width": 600,
+    "width": 780,
     "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/average_price_per_house_across_years.csv",
@@ -17,9 +14,65 @@
             }
         }
     },
+    "params": [
+        {
+            "name": "country_selection",
+            "value": "all",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "all",
+                    "Austria",
+                    "Belarus",
+                    "Croatia",
+                    "Georgia",
+                    "Greece",
+                    "Hungary",
+                    "Italy",
+                    "Latvia",
+                    "Lithuania",
+                    "Montenegro",
+                    "N. Cyprus",
+                    "Poland",
+                    "Portugal",
+                    "Russia",
+                    "Spain",
+                    "Thailand",
+                    "Turkey",
+                    "United Arab Emirates",
+                    "United States of America",
+                    "Uzbekistan"
+                ],
+                "labels": [
+                    "Overall",
+                    "Austria",
+                    "Belarus",
+                    "Croatia",
+                    "Georgia",
+                    "Greece",
+                    "Hungary",
+                    "Italy",
+                    "Latvia",
+                    "Lithuania",
+                    "Montenegro",
+                    "N. Cyprus",
+                    "Poland",
+                    "Portugal",
+                    "Russia",
+                    "Spain",
+                    "Thailand",
+                    "Turkey",
+                    "United Arab Emirates",
+                    "United States of America",
+                    "Uzbekistan"
+                ],
+                "name": "Country Selection: "
+            }
+        }
+    ],
     "transform": [
         {
-            "filter": "datum.country == 'all'"
+            "filter": "datum.country == country_selection"
         }
     ],
     "layer": [
@@ -112,7 +165,7 @@
                 "type": "text",
                 "color": "black",
                 "fontSize": 12,
-                "xOffset": 220,
+                "dx": 280,
                 "yOffset": -140
             },
             "encoding": {
@@ -120,7 +173,11 @@
                     "value": "Estimated"
                 },
                 "opacity": {
-                    "value": 0.2
+                    "condition": {
+                        "test": "datum.country == 'all'",
+                        "value": 0.2
+                    },
+                    "value": 0
                 }
             }
         },
