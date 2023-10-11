@@ -232,7 +232,7 @@
                                 "signal": "selectedCountry"
                             },
                             "fontSize": {
-                                "value": 40
+                                "value": 30
                             },
                             "strokeOpacity": {
                                 "value": 0.02
