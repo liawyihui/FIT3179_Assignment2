@@ -1,135 +1,95 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "params": [
-        {
-            "name": "country_selection",
-            "value": "all",
-            "bind": {
-                "input": "select",
-                "options": [
-                    "all",
-                    "Austria",
-                    "Belarus",
-                    "Croatia",
-                    "Georgia",
-                    "Greece",
-                    "Hungary",
-                    "Italy",
-                    "Latvia",
-                    "Lithuania",
-                    "Montenegro",
-                    "N. Cyprus",
-                    "Poland",
-                    "Portugal",
-                    "Russia",
-                    "Spain",
-                    "Thailand",
-                    "Turkey",
-                    "United Arab Emirates",
-                    "United States of America",
-                    "Uzbekistan"
-                ],
-                "labels": [
-                    "Overall",
-                    "Austria",
-                    "Belarus",
-                    "Croatia",
-                    "Georgia",
-                    "Greece",
-                    "Hungary",
-                    "Italy",
-                    "Latvia",
-                    "Lithuania",
-                    "Montenegro",
-                    "N. Cyprus",
-                    "Poland",
-                    "Portugal",
-                    "Russia",
-                    "Spain",
-                    "Thailand",
-                    "Turkey",
-                    "United Arab Emirates",
-                    "United States of America",
-                    "Uzbekistan"
-                ],
-                "name": "Country Selection: "
-            }
-        }
-    ],
+    "data": {
+      "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/property_distribution.csv"
+    },
     "vconcat": [
-        {
-            "title": {
-                "text": "Property Listing Distribution in Countries",
-                "fontSize": 20
-            },
-            "width": 755,
-            "height": 300,
-            "data": {
-                "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/property_distribution.csv"
-            },
-            "transform": [
-                {
-                    "filter": {
-                        "field": "count",
-                        "gte": 100
-                    }
-                }
-            ],
-            "mark": {
-                "type": "bar",
-                "color": "darkorange"
-            },
-            "encoding": {
-                "x": {
-                    "field": "count",
-                    "type": "quantitative",
-                    "title": "Number of Listings"
-                },
-                "y": {
-                    "field": "country",
-                    "type": "nominal",
-                    "title": "Country",
-                    "sort": "-x"
-                },
-                "tooltip": [
-                    {
-                        "field": "country",
-                        "type": "nominal",
-                        "title": "Country"
-                    },
-                    {
-                        "field": "count",
-                        "type": "quantitative",
-                        "title": "Number of Listings",
-                        "format": ",.0f"
-                    }
-                ],
-                "opacity": {
-                    "condition": [
-                        {
-                            "test": "country_selection === 'all'",
-                            "value": 1
-                        },
-                        {
-                            "test": "datum.country === country_selection",
-                            "value": 1
-                        }
-                    ],
-                    "value": 0.3
-                },
-                "strokeWidth": {
-                    "condition": [
-                        {
-                            "param": "country_selection",
-                            "value": 2
-                        }
-                    ],
-                    "value": 0
-                }
+      {
+        "title": {
+          "text": "Property Listing Distribution in Countries",
+          "fontSize": 20
+        },
+        "width": 755,
+        "height": 300,
+        "data": {
+          "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/property_distribution.csv"
+        },
+        "params": [
+          {
+            "name": "highlight",
+            "select": {"type": "point", "on": "pointerover", "encodings": ["y"]}
+          },
+          {
+            "name": "selected_country",
+            "select": {"type": "point", "encodings": ["y"]}
+          }
+        ],
+        "transform": [
+          {"filter": {"field": "count", "gte": 100}},
+          {"filter": "datum.year == 'all'"}
+        ],
+        "mark": {"type": "bar", "color": "darkorange"},
+        "encoding": {
+          "x": {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Number of Listings"
+          },
+          "y": {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country",
+            "sort": "-x"
+          },
+          "tooltip": [
+            {"field": "country", "type": "nominal", "title": "Country"},
+            {
+              "field": "count",
+              "type": "quantitative",
+              "title": "Number of Listings",
+              "format": ",.0f"
             }
+          ],
+          "fillOpacity": {
+            "condition": {"param": "selected_country", "value": 1},
+            "value": 0.3
+          },
+          "strokeWidth": {
+            "condition": [
+              {"param": "selected_country", "empty": false, "value": 2},
+              {"param": "highlight", "empty": false, "value": 1}
+            ],
+            "value": 0
+          }
         }
+      },
+      {
+        "width": 755,
+        "height": 100,
+        "mark": {"type": "line", "color": "orange", "point": true},
+        "transform": [
+          {"filter": {"param": "selected_country", "empty": false}},
+          {"filter": "datum.year != 'all'"}
+        ],
+        "encoding": {
+          "x": {"field": "year", "type": "ordinal", "title": "Year"},
+          "y": {"field": "count", "type": "quantitative", "title": "Listings"},
+          "tooltip": [
+            {"field": "country", "type": "nominal", "title": "Country"},
+            {
+              "field": "year",
+              "type": "ordinal",
+              "title": "Property Construction Year"
+            },
+            {
+              "field": "count",
+              "type": "quantitative",
+              "title": "Number of Listings",
+              "format": ",.0f"
+            }
+          ]
+        }
+      }
     ],
-    "config": {
-        "background": "#faf4ff"
-    }
-}
+    "config": {"background": "#faf4ff"}
+  }
