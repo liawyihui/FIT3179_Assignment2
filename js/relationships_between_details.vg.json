@@ -281,7 +281,7 @@
                             "strokeWidth": {
                                 "value": 1
                             },
-                            "opacity": {
+                            "stro#": {
                                 "value": 0.4
                             }
                         },
@@ -293,7 +293,7 @@
                                 "value": 2
                             },
                             "opacity": {
-                                "value": 1
+                                "value": 1.5
                             },
                             "strokeOpacity": {
                                 "value": 1
