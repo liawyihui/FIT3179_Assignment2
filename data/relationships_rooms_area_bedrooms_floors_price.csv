@@ -223,7 +223,7 @@ Turkey,16,1,2,100,103866
 Turkey,14,1,2,107,103983
 Turkey,5,3,2,75,179343
 Turkey,15,2,1,75,90215
-Turkey,8,2,1,4 000 ,117980
+United States of America,2,5,5,1156,6886042
 Turkey,6,3,2,75,127171
 Turkey,8,2,1,54,58806
 Turkey,5,2,1,38,176082
@@ -1791,7 +1791,7 @@ Turkey,7,7,6,285,574985
 Turkey,12,3,2,80,370643
 Turkey,5,3,2,90,358686
 Turkey,4,3,2,90,292384
-Turkey,5,1,3,28 002 ,206966
+United States of America,3,5,5,1156,6886042
 Turkey,15,3,2,135,396729
 Turkey,6,3,2,151,478248
 Turkey,9,2,1,60,321731
@@ -3887,7 +3887,7 @@ Greece,1,3,2,88,396729
 Greece,8,2,1,76,246856
 Greece,1,3,2,80,304340
 Greece,1,2,1,120,304340
-Hungary,3,4,2,135 000 ,318015
+United States of America,4,5,5,1160,4354555
 Greece,1,2,1,46,139127
 Serbia,4,2,1,43,65965
 Greece,2,4,3,120,304340
@@ -4135,8 +4135,8 @@ United States of America,2,3,3,348,1872607
 United States of America,24,3,3,88,371149
 United States of America,4,3,3,400,1634816
 United States of America,4,3,3,400,1634816
-United States of America,1,3,3,1 452 ,390943
-United States of America,2,3,3,1 802 ,489916
+United Arab Emirates,70,3,3,1165,18151700
+United States of America,1,8,8,1169,3958236
 United States of America,2,3,3,105,187950
 United States of America,10,2,2,103,244463
 United States of America,2,3,3,105,189868
@@ -4319,7 +4319,7 @@ Spain,4,3,2,95,378251
 Spain,7,4,3,83,365208
 Spain,24,4,3,156,429337
 United States of America,34,2,2,111,293951
-United States of America,21,3,3,1 702 ,634110
+United States of America,3,8,8,1169,3958236
 Spain,3,2,1,72,815196
 Spain,2,5,4,208,921715
 Spain,3,4,3,117,783675
@@ -4335,7 +4335,7 @@ Spain,4,4,3,195,749980
 United States of America,10,4,4,394,886764
 United States of America,38,3,3,168,464183
 Spain,4,3,2,95,673895
-United States of America,48,3,3,1 322 ,455767
+United States of America,2,7,7,1178,5424616
 United States of America,4,3,3,200,940267
 Spain,4,4,3,94,978235
 Spain,2,4,3,283,1042364
@@ -4454,7 +4454,7 @@ United States of America,3,4,4,241,1518343
 United States of America,3,4,4,262,1297945
 United States of America,1,4,4,269,1089877
 United States of America,1,4,4,269,1089877
-United States of America,3,4,4,27 746 ,2427454
+United States of America,1,7,7,1262,5449386
 United States of America,2,4,4,270,1382162
 United States of America,4,4,4,270,1382162
 United States of America,2,4,4,285,1337577
@@ -4499,15 +4499,15 @@ Spain,3,3,2,80,472814
 United States of America,1,5,5,757,1454491
 Spain,3,3,2,73,434771
 Spain,2,4,3,87,436945
-United States of America,2,5,5,1 156 ,6886042
-United States of America,3,5,5,1 156 ,6886042
+United States of America,1,9,9,1305,8867637
+United States of America,48,3,3,1322,455767
 Spain,3,4,3,90,369556
 Spain,4,2,1,99,354339
 Spain,2,4,3,170,478248
 Spain,4,3,2,81,407598
-United States of America,4,5,5,1 160 ,4354555
+United States of America,1,3,3,1452,390943
 Spain,4,5,4,91,407598
-United States of America,3,5,5,10 212 ,3467791
+United States of America,2,9,9,1524,7876840
 United States of America,24,3,3,116,196956
 United States of America,1,5,5,166,584571
 Spain,3,4,3,77,366295
@@ -4573,7 +4573,7 @@ Spain,4,3,2,84,433684
 United States of America,3,5,5,470,1689720
 United States of America,4,5,5,475,3467791
 Spain,30,2,1,78,436945
-United States of America,3,5,5,5 972 ,2947622
+United States of America,1,7,7,1623,16843557
 United States of America,9,3,3,151,398934
 United States of America,3,5,5,513,1679402
 Spain,6,3,2,330,380425
@@ -4776,13 +4776,13 @@ Spain,3,4,3,84,447814
 United States of America,2,6,6,713,2353144
 United States of America,4,6,6,910,2229294
 Spain,3,3,2,84,432597
-United States of America,2,7,7,1 178 ,5424616
+United States of America,21,3,3,1702,634110
 Spain,11,4,3,96,202169
 Spain,3,3,2,98,347817
-United States of America,1,7,7,1 262 ,5449386
-United States of America,1,7,7,1 623 ,16843557
-United States of America,1,8,8,1 169 ,3958236
-United States of America,3,8,8,1 169 ,3958236
+United States of America,2,3,3,1802,489916
+United States of America,3,5,5,10212,3467791
+Hungary,3,4,2,135000,318015
+United States of America,4,9,9,2513,14069324
 Spain,4,3,2,81,320644
 Spain,30,3,2,57,384773
 United States of America,38,2,2,85,217741
@@ -4808,9 +4808,9 @@ Spain,3,3,2,102,318470
 United States of America,30,2,2,100,233378
 Spain,4,3,2,91,326078
 Spain,4,3,2,100,281514
-United States of America,1,9,9,1 305 ,8867637
-United States of America,2,9,9,1 524 ,7876840
-United States of America,4,9,9,2 513 ,14069324
+United States of America,3,4,4,27746,2427454
+Turkey,5,1,3,28002,206966
+Thailand,8,1,1,3300,145481
 Spain,3,4,3,85,298905
 Spain,3,3,2,106,319557
 Spain,3,3,2,85,277167
@@ -5006,7 +5006,7 @@ Georgia,15,2,1,42,61446
 Georgia,15,1,1,35,37700
 Georgia,14,2,1,46,55560
 Georgia,8,2,1,61,50745
-Georgia,4,10,10,7 000 ,60192
+Thailand,8,1,1,3300,87265
 Georgia,25,2,1,44,68085
 Georgia,20,2,1,58,66930
 Georgia,27,2,1,62,49528
@@ -6049,7 +6049,7 @@ United Arab Emirates,13,5,4,586,12589068
 United Arab Emirates,46,3,2,271,5230137
 United Arab Emirates,35,3,2,194,2047123
 United Arab Emirates,46,5,4,720,14246575
-United Arab Emirates,70,3,3,1 165 ,18151700
+Turkey,8,2,1,4000,117980
 United Arab Emirates,52,4,3,262,1430795
 United Arab Emirates,42,3,2,128,1354764
 United Arab Emirates,47,2,1,159,1269589
@@ -6504,7 +6504,7 @@ Thailand,20,2,1,36,98482
 Thailand,7,2,1,36,115756
 Thailand,8,1,1,37,116812
 Thailand,24,2,1,49,81655
-Thailand,8,1,1,3 300 ,145481
+United States of America,3,5,5,5972,2947622
 Thailand,8,3,2,52,128197
 Thailand,8,2,1,43,103604
 Thailand,8,3,2,41,134139
@@ -6525,7 +6525,7 @@ Thailand,67,2,1,29,106580
 Thailand,8,1,1,30,126185
 Thailand,3,3,2,72,122171
 Thailand,8,2,1,47,107862
-Thailand,8,1,1,3 300 ,87265
+Georgia,4,10,10,7000,60192
 Thailand,67,3,2,41,139895
 Thailand,33,1,1,31,121000
 Thailand,8,2,1,49,142526
