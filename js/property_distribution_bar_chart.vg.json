@@ -118,7 +118,7 @@
                         "x": {
                             "field": "year",
                             "type": "ordinal",
-                            "title": "Year",
+                            "title": "Property Construction Year",
                             "axis": {
                                 "labelAngle": 0,
                                 "grid": false
