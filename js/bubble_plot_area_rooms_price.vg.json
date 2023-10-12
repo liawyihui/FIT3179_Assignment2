@@ -215,7 +215,7 @@
                         "title": "Property Price (USD)",
                         "format": ",.0f"
                     },
-                    {   
+                    {
                         "field": "continent",
                         "title": "Continent"
                     }
@@ -241,7 +241,7 @@
                 },
                 "opacity": {
                     "condition": {
-                        "test": "(datum['country'] == 'Belarus' || datum['country'] == 'Australia' || datum['country'] == 'United Arab Emirates'|| datum['country'] == 'Turkey'|| datum['country'] == 'Finland'|| datum['country'] == 'Poland'|| datum['country'] == 'Austria'|| datum['country'] == 'Indonesia' || datum['country'] == 'Montenegro' || datum['country'] == 'Czechia' || datum['country'] == 'Spain') && continent_highlight",
+                        "test": "(datum['country'] == 'Belarus' || datum['country'] == 'Australia' || datum['country'] == 'United Arab Emirates'|| datum['country'] == 'Turkey'|| datum['country'] == 'Finland'|| datum['country'] == 'Poland'|| datum['country'] == 'Austria'|| datum['country'] == 'Indonesia' || datum['country'] == 'Montenegro' || datum['country'] == 'Czechia' || datum['country'] == 'Spain' || country_selection == datum['country']) && (datum['country'] != 'United States of America' && datum['country'] != 'Cyprus')",
                         "value": 1
                     },
                     "value": 0
@@ -267,7 +267,7 @@
                 },
                 "opacity": {
                     "condition": {
-                        "test": "datum['country'] == 'United States of America' && continent_highlight",
+                        "test": "datum['country'] == 'United States of America'",
                         "value": 1
                     },
                     "value": 0
@@ -293,7 +293,7 @@
                 },
                 "opacity": {
                     "condition": {
-                        "test": "datum['country'] == 'Cyprus' && continent_highlight",
+                        "test": "datum['country'] == 'Cyprus'",
                         "value": 1
                     },
                     "value": 0
