@@ -268,10 +268,10 @@
                                 "value": "steelblue"
                             },
                             "strokeWidth": {
-                                "value": 1.5
+                                "value": 1
                             },
                             "strokeOpacity": {
-                                "value": 0.5
+                                "value": 0.4
                             }
                         },
                         "update": {
@@ -279,10 +279,10 @@
                                 "value": "steelblue"
                             },
                             "strokeWidth": {
-                                "value": 1.5
+                                "value": 1
                             },
                             "opacity": {
-                                "value": 0.5
+                                "value": 0.4
                             }
                         },
                         "hover": {
