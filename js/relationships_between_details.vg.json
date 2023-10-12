@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "title": {
-        "text": "Relationships between Property Characteristics",
+        "text": "Relationships Between Property Characteristics",
         "fontSize": 26
     },
     "width": 1110,
