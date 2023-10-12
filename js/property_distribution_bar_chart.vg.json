@@ -19,10 +19,7 @@
                     "name": "highlight",
                     "select": {
                         "type": "point",
-                        "on": "pointerover",
-                        "encodings": [
-                            "y"
-                        ]
+                        "on": "mouseover"
                     }
                 },
                 {
@@ -48,7 +45,9 @@
             ],
             "mark": {
                 "type": "bar",
-                "color": "darkblue"
+                "fill": "darkblue",
+                "stroke": "black",
+                "cursor": "pointer"
             },
             "encoding": {
                 "x": {
@@ -62,6 +61,23 @@
                     "title": "Country",
                     "sort": "-x"
                 },
+                "fillOpacity": {
+                    "condition": {
+                        "param": "selected_country",
+                        "value": 1
+                    },
+                    "value": 0.3
+                },
+                "strokeWidth": {
+                    "condition": [
+                        {
+                            "param": "highlight",
+                            "empty": false,
+                            "value": 1.5
+                        }
+                    ],
+                    "value": 0
+                },
                 "tooltip": [
                     {
                         "field": "country",
@@ -74,29 +90,7 @@
                         "title": "Number of Listings",
                         "format": ",.0f"
                     }
-                ],
-                "fillOpacity": {
-                    "condition": {
-                        "param": "selected_country",
-                        "value": 1
-                    },
-                    "value": 0.3
-                },
-                "strokeWidth": {
-                    "condition": [
-                        {
-                            "param": "selected_country",
-                            "empty": false,
-                            "value": 2
-                        },
-                        {
-                            "param": "highlight",
-                            "empty": false,
-                            "value": 1
-                        }
-                    ],
-                    "value": 0
-                }
+                ]
             }
         },
         {
@@ -194,6 +188,9 @@
         }
     ],
     "config": {
-        "background": "#faf4ff"
+        "background": "#faf4ff",
+        "scale": {
+            "bandPaddingInner": 0.2
+        }
     }
 }
