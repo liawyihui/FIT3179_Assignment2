@@ -271,7 +271,7 @@
                                 "value": 1.5
                             },
                             "strokeOpacity": {
-                                "value": 0.3
+                                "value": 0.5
                             }
                         },
                         "update": {
@@ -282,7 +282,7 @@
                                 "value": 1.5
                             },
                             "opacity": {
-                                "value": 0.3
+                                "value": 0.5
                             }
                         },
                         "hover": {
@@ -290,7 +290,7 @@
                                 "value": "orange"
                             },
                             "strokeWidth": {
-                                "value": 2.5
+                                "value": 2
                             },
                             "opacity": {
                                 "value": 1
@@ -298,67 +298,6 @@
                             "strokeOpacity": {
                                 "value": 1
                             }
-                        },
-                        "tooltip": {
-                            "signal": "{'Number of Rooms': datum.datum.apartment_rooms, 'Number of Bedrooms': datum.datum.apartment_bedrooms, 'Number of Floors': datum.datum.building_total_floors, 'Total Area (m²)': datum.datum.apartment_total_area, 'Property Price (USD)': datum.datum.price_in_USD}"
-                        }
-                    }
-                },
-                {
-                    "type": "symbol",
-                    "from": {
-                        "data": "fields"
-                    },
-                    "encode": {
-                        "enter": {
-                            "x": {
-                                "scale": "ord",
-                                "field": "data"
-                            },
-                            "y": {
-                                "scale": {
-                                    "datum": "data"
-                                },
-                                "field": {
-                                    "parent": {
-                                        "datum": "data"
-                                    }
-                                }
-                            },
-                            "size": {
-                                "value": 20
-                            },
-                            "fill": {
-                                "value": "steelblue"
-                            },
-                            "stroke": {
-                                "value": "steelblue"
-                            }
-                        },
-                        "update": {
-                            "fill": {
-                                "value": "steelblue"
-                            },
-                            "stroke": {
-                                "value": "steelblue"
-                            },
-                            "opacity": {
-                                "value": 1
-                            }
-                        },
-                        "hover": {
-                            "fill": {
-                                "value": "orange"
-                            },
-                            "stroke": {
-                                "value": "orange"
-                            },
-                            "opacity": {
-                                "value": 1
-                            }
-                        },
-                        "tooltip": {
-                            "signal": "{'Number of Rooms': datum.datum.apartment_rooms, 'Number of Bedrooms': datum.datum.apartment_bedrooms, 'Number of Floors': datum.datum.building_total_floors, 'Total Area (m²)': datum.datum.apartment_total_area, 'Property Price (USD)': datum.datum.price_in_USD}"
                         }
                     }
                 }
