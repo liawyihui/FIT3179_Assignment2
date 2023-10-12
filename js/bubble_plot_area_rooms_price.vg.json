@@ -12,13 +12,13 @@
     "params": [
         {
             "name": "Property_Price",
-            "value": 0,
+            "value": 600000,
             "bind": {
                 "input": "range",
                 "min": 0,
-                "max": 500000,
+                "max": 600000,
                 "step": 10000,
-                "name": "Minimum Property Price: "
+                "name": "Maximum Property Price: "
             }
         },
         {
@@ -89,7 +89,7 @@
     ],
     "transform": [
         {
-            "filter": "datum.min_price_in_USD > Property_Price"
+            "filter": "datum.min_price_in_USD < Property_Price"
         },
         {
             "filter": "country_selection == datum.country || country_selection == null"
@@ -253,7 +253,7 @@
                 "type": "text",
                 "align": "right",
                 "baseline": "middle",
-                "dx": 140,
+                "dx": 142,
                 "fontSize": 11.5,
                 "fontStyle": "italic"
             },
@@ -279,7 +279,7 @@
                 "type": "text",
                 "align": "right",
                 "baseline": "middle",
-                "dx": 50,
+                "dx": 52,
                 "fontSize": 11.5,
                 "fontStyle": "italic"
             },
@@ -323,7 +323,7 @@
                 },
                 "opacity": {
                     "condition": {
-                        "test": "datum['country'] == 'Belarus' && continent_highlight",
+                        "test": "datum['country'] == 'Belarus'",
                         "value": 1
                     },
                     "value": 0
