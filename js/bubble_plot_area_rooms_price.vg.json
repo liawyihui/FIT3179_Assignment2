@@ -373,7 +373,7 @@
             },
             "transform": [
                 {
-                    "filter": "datum.country == 'Australia' && country_selection == null && Property_Price == 0"
+                    "filter": "datum.country == 'Australia' && country_selection == null"
                 }
             ],
             "encoding": {
