@@ -27,3 +27,15 @@ h1 {
   padding-left: 21px;
   padding-top: 10px;
 }
+
+/* For screens smaller than 600px (e.g., mobile devices) */
+@media screen and (width: 800px) {
+  /* Adjust padding and margins for better spacing on small screens */
+  h1 {
+      width: 10px;
+  }
+}
+
+
+
+
