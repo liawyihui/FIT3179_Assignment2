@@ -4,7 +4,7 @@
         "text": "Comparison of Minimum Property Prices, Rooms, and Area Across Countries",
         "fontSize": 26
     },
-    "width": 1000,
+    "width": 999,
     "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/liawyihui/FIT3179_Assignment2/main/data/min_price_by_country.csv"
