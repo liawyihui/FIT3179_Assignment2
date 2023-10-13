@@ -4,7 +4,7 @@
         "text": "Relationships Between Property Characteristics",
         "fontSize": 26
     },
-    "width": 1115,
+    "width": 1105,
     "height": 400,
     "config": {
         "axisY": {
@@ -153,6 +153,7 @@
             "zindex": 1,
             "scale": "apartment_rooms",
             "title": "Number of Rooms",
+            "titleFontSize": 13,
             "offset": {
                 "scale": "ord",
                 "value": "apartment_rooms",
@@ -164,6 +165,7 @@
             "zindex": 1,
             "scale": "apartment_bedrooms",
             "title": "Number of bedrooms",
+            "titleFontSize": 13,
             "offset": {
                 "scale": "ord",
                 "value": "apartment_bedrooms",
@@ -174,6 +176,7 @@
             "orient": "left",
             "zindex": 1,
             "scale": "building_total_floors",
+            "titleFontSize": 13,
             "title": "Number of Floors",
             "offset": {
                 "scale": "ord",
@@ -185,6 +188,7 @@
             "orient": "left",
             "zindex": 1,
             "scale": "apartment_total_area",
+            "titleFontSize": 13,
             "title": "Total Area (m²)",
             "offset": {
                 "scale": "ord",
@@ -197,6 +201,7 @@
             "zindex": 1,
             "scale": "price_in_USD",
             "title": "Property Price (USD)",
+            "titleFontSize": 13,
             "offset": {
                 "scale": "ord",
                 "value": "price_in_USD",
