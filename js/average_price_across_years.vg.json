@@ -134,7 +134,7 @@
                 "type": "line",
                 "point": {
                     "filled": true,
-                    "size": 100
+                    "size": 70
                 },
                 "color": "darkblue"
             },
@@ -157,6 +157,12 @@
                     "field": "predicted",
                     "type": "nominal",
                     "legend": null
+                },
+                "strokeWidth": {
+                    "value": 3
+                },
+                "opacity": {
+                    "value": 2
                 }
             }
         },
