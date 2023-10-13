@@ -53,13 +53,19 @@
                 "x": {
                     "field": "count",
                     "type": "quantitative",
-                    "title": "Number of Listings"
+                    "title": "Number of Listings",
+                    "axis": {
+                        "titleFontSize": 15
+                    }
                 },
                 "y": {
                     "field": "country",
                     "type": "nominal",
                     "title": "Country",
-                    "sort": "-x"
+                    "sort": "-x",
+                    "axis": {
+                        "titleFontSize": 15
+                    }
                 },
                 "fillOpacity": {
                     "condition": {
@@ -151,7 +157,8 @@
                             "title": "Property Construction Year",
                             "axis": {
                                 "labelAngle": 0,
-                                "grid": false
+                                "grid": false,
+                                "titleFontSize": 15
                             }
                         },
                         "y": {
@@ -159,7 +166,8 @@
                             "type": "quantitative",
                             "title": "Listings",
                             "axis": {
-                                "grid": false
+                                "grid": false,
+                                "titleFontSize": 15
                             }
                         },
                         "tooltip": [

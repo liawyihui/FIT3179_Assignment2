@@ -15,7 +15,7 @@
             "value": 600000,
             "bind": {
                 "input": "range",
-                "min": 0,
+                "min": 10000,
                 "max": 600000,
                 "step": 10000,
                 "name": "Maximum Property Price: "
@@ -100,6 +100,9 @@
             "field": "area",
             "type": "quantitative",
             "title": "Total Area (m²)",
+            "axis": {
+                "titleFontSize": 15
+            },
             "scale": {
                 "domain": [
                     0,
@@ -112,7 +115,8 @@
             "type": "quantitative",
             "title": "Property Price (USD)",
             "axis": {
-                "tickCount": 3
+                "tickCount": 3,
+                "titleFontSize": 15
             },
             "scale": {
                 "type": "log",
@@ -366,9 +370,9 @@
                 "type": "text",
                 "align": "left",
                 "baseline": "middle",
-                "xOffset": -295,
-                "yOffset": 270,
-                "fontSize": 15,
+                "xOffset": -245,
+                "yOffset": 280,
+                "fontSize": 12,
                 "fontWeight": "bold"
             },
             "transform": [

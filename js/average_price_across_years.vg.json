@@ -124,7 +124,8 @@
                     "type": "quantitative",
                     "title": "Number of Listings",
                     "axis": {
-                        "titleColor": "mediumturquoise"
+                        "titleColor": "mediumturquoise",
+                        "titleFontSize": 15
                     }
                 }
             }
@@ -142,7 +143,10 @@
                 "x": {
                     "field": "year",
                     "type": "ordinal",
-                    "title": "Property Construction Year"
+                    "title": "Property Construction Year",
+                    "axis": {
+                        "titleFontSize": 15
+                    }
                 },
                 "y": {
                     "field": "price",
@@ -150,7 +154,8 @@
                     "title": "Average Price (USD)",
                     "axis": {
                         "titleColor": "darkblue",
-                        "grid": true
+                        "grid": true,
+                        "titleFontSize": 15
                     }
                 },
                 "strokeDash": {
