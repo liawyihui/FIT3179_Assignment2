@@ -336,7 +336,7 @@
                 "align": "left",
                 "baseline": "middle",
                 "dx": -230,
-                "dy": -60,
+                "dy": -50,
                 "fontSize": 12,
                 "fontWeight": "bold"
             },
