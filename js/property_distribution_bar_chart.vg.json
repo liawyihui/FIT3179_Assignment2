@@ -110,6 +110,36 @@
                         }
                     ],
                     "mark": {
+                        "type": "text",
+                        "color": "gray",
+                        "fontSize": 20
+                    },
+                    "encoding": {
+                        "text": {
+                            "field": "country"
+                        },
+                        "opacity": {
+                            "condition": {
+                                "test": "selected_country",
+                                "value": 0.05
+                            },
+                            "value": 0
+                        }
+                    }
+                },
+                {
+                    "transform": [
+                        {
+                            "filter": {
+                                "param": "selected_country",
+                                "empty": false
+                            }
+                        },
+                        {
+                            "filter": "datum.year != 'all'"
+                        }
+                    ],
+                    "mark": {
                         "type": "line",
                         "color": "darkblue",
                         "point": true
