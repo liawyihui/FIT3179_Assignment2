@@ -18,10 +18,14 @@
   },
   "params": [
     {
-      "name": "year_selection_checkbox",
-      "value": "true",
+      "name": "year_selection_radio",
+      "value": "Enable",
       "bind": {
-        "input": "checkbox",
+        "input": "radio",
+        "options": [
+          "Enable",
+          "Disable"
+        ],
         "name": "Disable/Enable year slider?"
       }
     },
@@ -128,7 +132,7 @@
           "as": "average_price_per_area"
         },
         {
-          "filter": "((year_selection_checkbox && datum.building_construction_year == year_selection) || (!year_selection_checkbox && datum.building_construction_year == 'All years')) && (continent_selection == datum.continent || continent_selection == null)"
+          "filter": "((year_selection_radio =='Enable' && datum.building_construction_year == year_selection) || (year_selection_radio == 'Disable' && datum.building_construction_year == 'All years')) && (continent_selection == datum.continent || continent_selection == null)"
         }
       ],
       "mark": {
@@ -394,7 +398,7 @@
           "as": "average_price_per_area"
         },
         {
-          "filter": "((year_selection_checkbox && datum.building_construction_year == year_selection) || (!year_selection_checkbox && datum.building_construction_year == 'All years')) && (continent_selection == datum.continent || continent_selection == null)"
+          "filter": "((year_selection_radio == 'Enable' && datum.building_construction_year == year_selection) || (year_selection_radio == 'Disable' && datum.building_construction_year == 'All years')) && (continent_selection == datum.continent || continent_selection == null)"
         }
       ],
       "mark": {
