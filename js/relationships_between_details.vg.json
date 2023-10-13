@@ -131,7 +131,7 @@
             "zero": false,
             "nice": true,
             "domain": {
-                "data": "details",
+                "data": "filteredDetails",
                 "field": "apartment_total_area"
             }
         },
@@ -142,7 +142,7 @@
             "zero": false,
             "nice": true,
             "domain": {
-                "data": "details",
+                "data": "filteredDetails",
                 "field": "price_in_USD"
             }
         }
