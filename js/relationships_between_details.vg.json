@@ -278,7 +278,7 @@
                                 "value": 0.3
                             },
                             "tooltip": {
-                                "signal": "{'Country' : selectedCountry, 'Number of Rooms': parent.apartment_rooms, 'Number of Bedrooms': parent.apartment_bedrooms, 'Number of Floors' : parent.building_total_floors, 'Total Area (m²)' : parent.apartment_total_area, 'Property Price (USD)' : parent.price_in_USD}"
+                                "signal": "{'Country' : selectedCountry, 'Number of Rooms': parent.apartment_rooms, 'Number of Bedrooms': parent.apartment_bedrooms, 'Number of Floors' : parent.building_total_floors, 'Total Area (m²)' : format(parent.apartment_total_area, ',.0f'), 'Property Price (USD)' : format(parent.price_in_USD, ',.0f')}"
                             }
                         },
                         "update": {
