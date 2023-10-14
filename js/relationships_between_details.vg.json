@@ -164,7 +164,7 @@
             "orient": "left",
             "zindex": 1,
             "scale": "apartment_bedrooms",
-            "title": "Number of bedrooms",
+            "title": "Number of Bedrooms",
             "titleFontSize": 13,
             "offset": {
                 "scale": "ord",
@@ -276,6 +276,9 @@
                             },
                             "strokeOpacity": {
                                 "value": 0.3
+                            },
+                            "tooltip": {
+                                "signal": "{'Number of Rooms': parent.apartment_rooms, 'Number of Bedrooms': parent.apartment_bedrooms, 'Number of Floors' : parent.building_total_floors, 'Total Area (m²)' : parent.apartment_total_area, 'Property Price (USD)' : parent.price_in_USD}"
                             }
                         },
                         "update": {
