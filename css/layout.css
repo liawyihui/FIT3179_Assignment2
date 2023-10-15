@@ -23,3 +23,28 @@ h1 {
   margin: 0 auto;
   text-align: center;
 }
+
+.items {
+  max-width: 100%;
+}
+
+.chart-descriptions {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+.visualization-descriptions {
+  background-color: #bbe5ff;
+  min-width: 450px;
+  max-width: 450px;
+  min-height: 352px;
+  height: 99%;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+}
